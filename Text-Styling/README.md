@@ -17,3 +17,4 @@ This exercise helped practice how **text styling** and layout are applied in a v
 ## Demo Picture:  
 
 Here is a demo Picture of how this code output looks like: 
+<img width="571" height="707" alt="Image" src="https://github.com/user-attachments/assets/9196ea59-ec96-42f9-b230-976c4d06db9c" />
