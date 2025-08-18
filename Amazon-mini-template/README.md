@@ -18,3 +18,4 @@ This exercise helped practice how **product cards** are commonly styled in onlin
 ## Demo Video  
 
 Here is a demo video of how this code output looks like: 
+https://github.com/user-attachments/assets/b79389a5-8c19-418d-917d-c860c23c0918
