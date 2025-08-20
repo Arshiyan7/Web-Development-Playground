@@ -19,3 +19,4 @@ This exercise gave hands-on practice in replicating **modern UI components** fro
 
 Here is how the code output looks like (Google-style search, LinkedIn login, and Twitter post UI):  
 
+<img width="795" height="598" alt="Image" src="https://github.com/user-attachments/assets/abfb7409-c332-486c-8b0e-b878970514f1" />
