@@ -21,3 +21,5 @@ This exercise provided hands-on practice in replicating **real-world UI elements
 ## Demo Preview  
 
 Here is how the code output looks like (sign-up form, Uber ride registration, and Facebook friend requests UI):  
+
+<img width="806" height="656" alt="Image" src="https://github.com/user-attachments/assets/11ef130a-f5bb-43d6-8ba6-09a69bc193e7" />
