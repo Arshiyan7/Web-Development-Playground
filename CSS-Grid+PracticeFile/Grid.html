@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="Grid.css">
+</head>
+
+<body>
+    <div style="
+        display: grid;
+        grid-template-columns: 100px 100px;
+        ">
+        <div style="background-color: rgb(171, 171, 231);">div1</div>
+        <div style="background-color: pink;">div2
+            <p>Text</p> <!--By adding text to Div it'll force the Div to expand-->
+        </div>
+    </div>
+
+    <div style="
+        display: grid;
+        grid-template-columns: 100px 100px 200px;
+        margin-top: 30px;
+        ">
+        <div style="background-color: rgb(171, 171, 231);">100px</div>
+        <div style="background-color: pink;">100px
+            <p>Text</p>
+        </div>
+        <div style="background-color: lightblue;">200px</div>
+        <div style="background-color: lightseagreen;">div4</div>
+        <!-- since columns are only 3 in the Main div style if we add more than 3 column it'll force 4th Div to come down-->
+    </div>
+
+    <div style="
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        margin-top: 30px;
+        column-gap: 20px;
+        row-gap: 20px;
+        "> <!--1fr means the second Div should take all of the space remaining-->
+        <div style="background-color: lightblue; height: 200px;">1</div>
+        <div style="background-color: pink; height: 200px">2</div>
+        <div style="background-color: lightblue; height: 200px">3</div>
+        <div style="background-color: pink; height: 200px">4</div>
+        <div style="background-color: lightblue; height: 200px">5</div>
+        <div style="background-color: pink; height: 200px">6</div>
+    </div>
+</body>
+
+</html>
