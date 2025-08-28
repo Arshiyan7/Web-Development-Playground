@@ -1,59 +1,104 @@
-body {
+/* import youtube default font (Roboto) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+body{font-family: 'roboto',sans-serif;}
+
+/* Header Start styling */
+.material-icons{
+    color: rgb(40,37,37);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px;
+}
+.header-left{
+    display: flex;
+    align-items: center;
+}
+.youtube-logo
+{
+    height: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.header i{
+    cursor: pointer;
+    padding: 0px 7px;
 }
 
-p {
-    font-family: roboto, Arial;
-    margin-top: 0;
-    margin-bottom: 0;
+
+/* Header > Search styling  */
+
+.header-search{
+    display: flex;
+}
+.header-search form{
+    display: flex;
+    border: 1x solid #ddd;
+    height: 36px;
+    border: none;
+}
+.header-search input{
+    padding: 5px;
+    width: 500px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-right: none;
+}
+.header-search button{
+    height: 100%;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px; 
+    border-left: none;
+}
+.search-mic{
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+.search-mic:hover{
+    background-color: #e5e5e5;
 }
 
-.thumbnail {
-    width: 100%;
+.header-icons
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.create-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: rgb(15,15,15);
+    height: 40px;
+    padding: 0 16px;
+    border: none;
     border-radius: 20px;
-    margin-bottom: 12px;
+    font-weight: 500;   /* semi-bold like YouTube */
+    cursor: pointer;
 }
 
-.video-preview {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.video-info-grid {
-    display: grid;
-    grid-template-columns: 50px 1fr;
+.header-icons img{
+    width: 36px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 
 
-.profile-picture {
-    width: 100%;
-    border-radius: 50px;
 
-}
-
-.video-title {
-    margin-top: 0;
-    border-radius: 40px;
-    font-family: Roboto, Arial;
-    font-weight: 500;
-    line-height: 20px;
-    font-size: 16px;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-.channel-name,
-.stats {
-    font-weight: 400;
-    font-size: 14px;
-    color: rgb(96, 96, 96);
-    margin-bottom: 5px;
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 15px;
-    row-gap: 15px;
-}
+/* Header Styling end */
