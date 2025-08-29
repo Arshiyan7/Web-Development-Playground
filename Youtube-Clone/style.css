@@ -88,8 +88,11 @@ body{font-family: 'roboto',sans-serif;}
     padding: 0 16px;
     border: none;
     border-radius: 20px;
-    font-weight: 500;   /* semi-bold like YouTube */
+    font-weight: 500;   
     cursor: pointer;
+}
+.create-btn:hover{
+    background-color: #e5e5e5;
 }
 
 .header-icons img{
@@ -97,8 +100,46 @@ body{font-family: 'roboto',sans-serif;}
     border-radius: 50%;
     object-fit: cover;
 }
-
-
-
-
 /* Header Styling end */
+
+/* Main-body styling start */
+.main-body{
+    overflow: hidden;
+    display: flex;
+    height: calc(100vh-70px);
+}
+
+/* Side-bar styling start */
+.side-bar{
+    overflow: scroll;
+    width: 230px;
+    height: 100%;
+    background-color: white;
+}
+.sidebar-categories{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-category{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+}
+.sidebar-category span{
+    margin-left: 15px;
+}
+.sidebar-category:hover{
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.side-bar::-webkit-scrollbar{
+    display: none;
+}
+hr{
+    border: none;
+    background-color: #e5e5e5;
+    height: 1px;
+}
+/* Side bar styling ends  */
