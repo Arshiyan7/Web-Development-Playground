@@ -1,145 +1,88 @@
-/* import youtube default font (Roboto) */
+/* Import default Youtube font (Roboto) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{font-family: 'roboto',sans-serif;}
 
-/* Header Start styling */
-.material-icons{
-    color: rgb(40,37,37);
+body {
+    font-family: 'Roboto', 'sans-serif';
 }
-.header{
+
+/* Main Header styling */
+.header {
     display: flex;
     justify-content: space-between;
+    border: 2px solid red;
     align-items: center;
-    height: 70px;
+    height: 80px;
     padding: 15px;
 }
-.header-left{
+
+/* Left section sytling start */
+.left-section img {
+    width: 100px;
+    height: 100px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: 20px;
+    width: 150px;
+    height: 50px;
+}
+
+.header i {
+    cursor: pointer;
+}
+
+/* left-section styling end */
+
+/* middle section styling start */
+.middle-section {
     display: flex;
     align-items: center;
 }
-.youtube-logo
-{
-    height: 24px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-.header i{
-    cursor: pointer;
-    padding: 0px 7px;
-}
 
-
-/* Header > Search styling  */
-
-.header-search{
+.middle-section form {
+    border: 1px solid #ddd;
+    height: 45px;
     display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
 }
-.header-search form{
-    display: flex;
-    border: 1x solid #ddd;
-    height: 36px;
+
+.middle-section input {
+    flex: 1;
+    height: 45px;
+    padding: 0 10px;
     border: none;
+    outline: none;
+    width: 600px;
+    font-size: 16px;
+    
 }
-.header-search input{
-    padding: 5px;
-    width: 500px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    border-right: none;
+
+.middle-section button {
+    height: 45px;
+    width: 60px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
-.header-search button{
-    height: 100%;
-    border-bottom-right-radius: 40px;
-    border-top-right-radius: 40px; 
-    border-left: none;
-}
-.search-mic{
-    margin-left: 10px;
+.mic-icon{
+    background-color: #eee;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 15px;
     height: 40px;
     width: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
 }
-.search-mic:hover{
-    background-color: #e5e5e5;
-}
-
-.header-icons
-{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.create-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: rgb(15,15,15);
-    height: 40px;
-    padding: 0 16px;
-    border: none;
-    border-radius: 20px;
-    font-weight: 500;   
-    cursor: pointer;
-}
-.create-btn:hover{
-    background-color: #e5e5e5;
-}
-
-.header-icons img{
-    width: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-/* Header Styling end */
-
-/* Main-body styling start */
-.main-body{
-    overflow: hidden;
-    display: flex;
-    height: calc(100vh-70px);
-}
-
-/* Side-bar styling start */
-.side-bar{
-    overflow: scroll;
-    width: 230px;
-    height: 100%;
-    background-color: white;
-}
-.sidebar-categories{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-}
-.sidebar-category{
-    display: flex;
-    align-items: center;
-    padding: 12px 25px;
-}
-.sidebar-category span{
-    margin-left: 15px;
-}
-.sidebar-category:hover{
-    background-color: #e5e5e5;
-    cursor: pointer;
-}
-.side-bar::-webkit-scrollbar{
-    display: none;
-}
-hr{
-    border: none;
-    background-color: #e5e5e5;
-    height: 1px;
-}
-/* Side bar styling ends  */
