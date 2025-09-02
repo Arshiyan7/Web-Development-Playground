@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            background-color: crimson;
+        }
+        /*apply the following style if the width of the website become less than or equal to 400px */
+        @media only screen and (max-width : 400px) {
+            body{
+                background-color: lightskyblue;
+            }
+            .boxes{
+                flex-direction: column; /*Change flex direction to column once it get to max width 400px*/
+            }
+            
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            width: 244px;
+            height: 244px;
+            background-color: black;
+            padding: 3px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> 
+    </div>
+</body>
+</html>
