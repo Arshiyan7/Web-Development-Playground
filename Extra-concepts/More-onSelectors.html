@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        /* 
+        div:first-child{
+            background-color: red;
+        } 
+            
+        div::first-line {
+            color: yellow;
+        } 
+        
+        
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        [data-color = "primary"]{          apply padding 40px where data-color = "Primary"
+            padding-top: 40px;
+        }
+        
+
+        .box:nth-child(even){      apply white text color and crimson background where a text is even 
+            background-color: crimson;
+            color: white;
+        }
+        
+
+        .boxes::before{
+            content: "I am here before box div";
+            background-color: crimson;
+            color: white;
+        }
+
+        .boxes::after{
+            content: "I am here after box div";
+            background-color: pink;
+        }
+        */
+        ::selection{
+            color: red;
+            /*if text is select to copy then text color will change*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">BOX HERE!!</div>
+        <div class="box">BOX HERE!!</div>
+        <div class="box">BOX HERE!!</div>
+    </div>
+</body>
+
+</html>
