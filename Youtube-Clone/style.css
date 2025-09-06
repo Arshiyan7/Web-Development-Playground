@@ -120,3 +120,100 @@ body {
 .create-btn:hover{
     background-color: #d6d6d6;
 }
+
+/* main body starts  */
+.main-body{
+    display: flex;
+    height: calc(100vh-70x);
+    overflow: hidden;
+}
+.side-bar{
+    height: 100%;
+    width: 230px;
+    overflow-y: scroll;
+    background-color: white;
+}
+.sidebar-categories{
+    display: flex;
+    flex-direction: column;
+    width: 100% ;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.sidebar-category{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+}
+.sidebar-category span{
+    margin-left: 15px;
+}
+.sidebar-category:hover{
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.side-bar::-webkit-scrollbar{
+    display: none;
+}
+hr{
+    background-color: #e5e5e5;
+    height: 1px;
+    border: none;
+}
+.videos{
+    width: 100vw;
+}
+.recommend{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    margin-left: 37px;
+    
+}
+
+.recommend span{
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: #efeeee;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.videos-container{
+    width: 422px;
+    height: 415px;
+}
+.thumbnail{
+    width: 400px;
+    height: 230px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 20px;
+    display: block;
+}
+.profile-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.video-stats{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.title{
+    font-weight: 400;
+}
+.name{
+    margin-top: 8px;
+    color: rgb(69, 69, 69);
+    font-size: 14px;
+}
+.stats{
+    margin-top: 6px;
+    color: rgb(69, 69, 69);
+    font-size: 14px;
+}
+
