@@ -4,118 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube-Clone</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>YouTube Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <!--Header start --->
     <div class="header">
-        <div class="header-left">
+        <div class="left-header">
             <i class="material-icons">menu</i>
-            <img src="images-and-pf's/youtube-logo.svg" alt="">
+            <img src="images-and-pf's/youtube-logo.svg" alt="YouTube Logo">
         </div>
-        <div class="header-search">
+
+        <div class="search-header">
             <form action="">
                 <input type="text" placeholder="Search">
-                <button>
-                    <i class="material-icons">search</i>
-                </button>
+                <button type="submit"><i class="material-icons">search</i></button>
             </form>
-            <div class="search-mic">
-                <i class="material-icons">mic</i>
-            </div>
-        </div>
-        <div class="header-right">
-            <button class="create-btn"><i class="material-icons">add</i>Create</button>
-            <i style="margin-right: 20px; margin-left: 10px;" class="material-icons">notifications</i>
-            <img src="images-and-pf's/my_pfp.jpg" alt="">
-        </div>
-    </div> <!--Header End --->
-
-    <!-- Main body start  -->
-    <div class="main-body">
-        <div class="side-bar">
-            <div class="sidebar-categories">
-                <div class="sidebar-category">
-                    <i class="material-icons">home</i>
-                    <span>Home</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">local_fire_department</i>
-                    <span>Trending</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">subscriptions</i>
-                    <span>subscribtion</span>
-                </div>
-            </div>
-            <hr>
-            <div class="sidebar-categories">
-                <div class="sidebar-category">
-                    <i class="material-icons">history</i>
-                    <span>History</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">playlist_play</i>
-                    <span>playlists</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">smart_display</i>
-                    <span>Your videos</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">school</i>
-                    <span>Your courses</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">schedule</i>
-                    <span>Watch later</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">thumb_up</i>
-                    <span>Liked videos</span>
-                </div>
-                <div class="sidebar-category">
-                    <i class="material-icons">vertical_align_bottom</i>
-                    <span>downloads</span>
-                </div>
-
-            </div>
-            <hr>
-        </div><!-- side-bar ends -->
-        <div class="videos">
-            <div class="recommend">
-                <span>All</span>
-                <span>Gaming</span>
-                <span>Esports</span>
-                <span>Music</span>
-                <span>Code</span>
-                <span>UEFA</span>
-                <span>Wrestling</span>
-                <span>Web Development</span>
-                <span>Artifical Intelligance</span>
-                <span>Game for Peace</span>
-                <span>Podcasts</span>
-                <span>News</span>
-                <span>Real Madrid</span>
-            </div>
-            <div class="videos-container">
-                <img src="images-and-pf's/image1.jpg" alt="" class="thumbnail">
-                <div class="video-stats">
-                    <img src="images-and-pf's/image1-pf.jpg" alt="" class="profile-pic">
-                    <div>
-                        <h3 class="title">David Goggins Puts Israel Adesanya Through A BRUTAL Training Session | FULL
-                            WORKOUT</h3>
-                        <p class="name">FREESTYLEBENDERS</p>
-                        <p class="stats">5.2M views &#183; 4 months ago</p>
-                    </div>
-                </div>
-            </div>
-            
+            <div class="mic"><i class="material-icons">mic</i></div>
         </div>
 
+        <div class="right-header">
+            <button><i class="material-icons">add</i> Create</button>
+            <div class="notification"><i class="material-icons">notifications</i></div>
+            <img src="images-and-pf's/my_pfp.jpg" alt="My Profile Picture">
+        </div>
+    </div>
 </body>
 
 </html>
