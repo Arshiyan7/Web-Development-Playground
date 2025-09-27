@@ -4,6 +4,7 @@
     --background-color: #eeeff1;
 }
 
+/* GLOBAL RESETS */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
 }
 
@@ -24,7 +25,13 @@ a {
     color: var(--link-color);
 }
 
-/* NAVBAR STYLING */
+/* UTILITY CLASS */
+.section {
+    margin-bottom: 100px;
+    padding: 0 50px;
+}
+
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,24 +49,39 @@ nav .left a {
 nav .right a {
     color: var(--text-color);
     margin: 0 10px;
+    transition: 0.2s ease;
+}
+
+nav .right a:hover {
+    cursor: pointer;
+}
+
+nav .right a:first-child:hover {
+    color: rgb(96, 96, 96);
+}
+
+nav .right a:nth-child(2):hover {
+    color: blue;
 }
 
 nav .right a:last-child {
     background-color: var(--text-color);
     color: var(--background-color);
-    padding: 5px 15px;
+    padding: 10px 15px;
     border-radius: 10px;
 }
 
-/* HERO SECTION STYLING */
+nav .right a:last-child:hover {
+    background-color: rgb(205, 5, 5);
+}
+
+/* HERO SECTION */
 .hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    margin: 50px;
-    margin-bottom: 100px;
-    padding: 0 50px;
+    margin-top: 30px;
 }
 
 .hero-section .text {
@@ -106,52 +128,145 @@ nav .right a:last-child {
     border-color: var(--text-color);
 }
 
-/* SKILLS SECTION STYLING */
-
-.skills-section{
-    padding: 0 50px;
-    margin-bottom: 100px;
-}
-.skills-section h2{
+/* SKILLS SECTION */
+.skills-section h2 {
     text-align: center;
     font-size: 35px;
 }
 
-.skills-section .text{
+.skills-section .text {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.skills-section .cells{
+.skills-section .cells {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.skills-section .cells .cell{
+.skills-section .cells .cell {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     border: 1.5px solid #d3d3d3;
     border-radius: 8px;
     padding: 10px 20px;
     margin: 10px;
     width: 200px;
+    transition: 0.2s ease;
 }
 
-.skills-section .cells .cell img{
+.skills-section .cells .cell:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.skills-section .cells .cell img {
     border-radius: 5px;
     object-fit: contain;
     width: 40px;
     height: 40px;
 }
 
-.skills-section .cells .cell span{
+.skills-section .cells .cell span {
     font-size: 18px;
     font-weight: 550;
 }
+
+/* TESTIMONY SECTION */
+.testimony-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.testimony-section .group {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.testimony-section .group img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimony-section .group .person-details {
+    flex: 2;
+    text-align: center;
+}
+
+.testimony-section .group .text {
+    flex: 8;
+    line-height: 25px;
+}
+
+.testimony-section .group .person-details p {
+    font-weight: 600;
+}
+
+.testimony-section .group .person-details p:last-child {
+    font-weight: normal;
+}
+
+/* CONTACT SECTION */
+.contact-section h2 {
+    font-size: 35px;
+}
+
+.contact-section .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+    flex: 3;
+    margin-top: 30px;
+    line-height: 25px;
+}
+
+.contact-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: inherit;
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+    transition: border-color 0.2s ease;
+}
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus {
+    border-color: var(--link-color);
+}
+
+.contact-section .group form button {
+    font-size: 16px;
+    font-family: inherit;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover {
+    filter: brightness(.9);
+}
+
+/* RESPONSIVE */
 @media (max-width: 1060px) {
     .hero-section h1 {
         font-size: 35px;
@@ -162,13 +277,17 @@ nav .right a:last-child {
     .hero-section {
         flex-direction: column-reverse;
         align-items: center;
+        text-align: center;
         margin: 30px 20px;
         padding: 0;
-        text-align: center;
     }
 
     .hero-section .headshot img {
         width: 300px;
+    }
+
+    .contact-section .group {
+        flex-direction: column;
     }
 }
 
@@ -191,8 +310,6 @@ nav .right a:last-child {
         padding: 0;
     }
 
-/* HERO SECTION */
-
     .hero-section h1 {
         font-size: 28px;
     }
@@ -202,28 +319,6 @@ nav .right a:last-child {
         line-height: 24px;
     }
 
-    .hero-section .text .links a {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 400px) {
-    .hero-section h1 {
-        font-size: 24px;
-    }
-
-    .hero-section .headshot img {
-        width: 250px;
-    }
-
-    .hero-section p {
-        font-size: 15px;
-        line-height: 22px;
-    }
-}
-
-@media (max-width: 600px) {
     .skills-section h2 {
         font-size: 28px;
     }
@@ -241,9 +336,34 @@ nav .right a:last-child {
     .skills-section .cells .cell span {
         font-size: 16px;
     }
+
+    .testimony-section {
+        text-align: center;
+    }
+
+    .testimony-section .group {
+        flex-direction: column;
+    }
+
+    .testimony-section .person-details {
+        margin-bottom: -25px;
+    }
 }
 
 @media (max-width: 400px) {
+    .hero-section h1 {
+        font-size: 24px;
+    }
+
+    .hero-section .headshot img {
+        width: 250px;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
     .skills-section h2 {
         font-size: 24px;
     }
@@ -262,4 +382,3 @@ nav .right a:last-child {
         font-size: 14px;
     }
 }
-
