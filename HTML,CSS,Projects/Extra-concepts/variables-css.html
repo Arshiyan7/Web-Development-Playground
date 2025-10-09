@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        :root {
+            /*Variable applied (Global Variable) can be used anywhere*/
+            --color: lightblue;
+            --seccolor: lightgreen;
+        }
+
+        .nav {
+            background-color: var(--color);
+
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 34px;
+        }
+
+        .container {
+            background-color: var(--seccolor);
+        }
+
+        ul li:first-child {
+
+            --color: rgb(219, 146, 61, crimson);
+            /*(Local Variable) can only be used inside this ul li*/
+            /*Crimson color is used as a backup is --color is not found*/
+
+            background-color: var(--color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat numquam voluptatum magnam porro earum id
+        eum, incidunt quam eos! Harum debitis expedita pariatur id ab blanditiis sed veniam, quis reprehenderit laborum
+        error exercitationem tenetur aspernatur consequatur illum. Ab accusamus mollitia, amet soluta fuga unde.
+    </div>
+</body>
+
+</html>

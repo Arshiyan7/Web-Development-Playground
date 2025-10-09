@@ -1,0 +1,63 @@
+body{
+    font-family: Arial;
+}
+button{
+    cursor: pointer;
+}
+/* Pagination styling */
+.back-button{
+    margin-right: 10px;
+}
+.Next-button{
+    margin-left: 10px;
+}
+a{
+    padding: 2px;
+}
+
+/* Stretch Button Styling */
+
+.stretch{
+    background-color: rgb(13, 148, 13);
+    color: white;
+    padding: 4px;
+    transition: 0.40s ;
+}
+.stretch:hover{
+     padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* 3D-Click Button Styling */
+.click{
+    background-color: rgb(181, 24, 27);
+    color: white;
+    
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.30);
+}
+.click:active{
+    margin-left: 3px;
+    margin-top: 3px;
+    box-shadow: none;
+}
+
+.primary-btn {
+  color: white;
+  background-color: purple;
+  transition: 0.3s ease;
+  margin-left: 10px;
+  padding: 8px 16px;   
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  transform: scale(1.1);   
+  background-color: indigo;
+}

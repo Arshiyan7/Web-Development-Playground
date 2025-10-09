@@ -1,0 +1,51 @@
+.div-1 {
+    background-color: lightblue;
+}
+
+.div-2 {
+    background-color: pink;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.s-main-div,
+.t-main-div,
+.f-main-div,
+.fifth-main-div,
+.sixth-main-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.f-main-div {
+    height: 70px;
+    border: 1px solid gray;
+    justify-content: end;
+    /* Adds items to the end */
+    /*justify-content: center; /* Adds itmes to the center */
+    /* justify-content: start; default */
+}
+
+.fifth-main-div {
+    height: 70px;
+    border: 1px solid gray;
+    justify-content: center;
+    justify-content: space-between;
+    /*gives space between elements in the Main Div container */
+
+}
+
+.sixth-main-div {
+    height: 70px;
+    border: 1px solid gray;
+    justify-content: center;
+    justify-content: space-between;
+    /*align-items: start; /* only takes up space they need and placed at start */
+    align-items: stretch;
+    /* Cover remaining space */
+    /* align-items: end; /*only take up space they need but placed at end*/
+}

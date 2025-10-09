@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .box {
+            border: 2px solid red;
+            background-color: black;
+            height: 50px;
+            width: 50px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* Transforms ---- Rotate, RotateX RotateY: 
+
+            /* transform: rotate(45deg); deg = Degrees (will make box rotate based on degree provided) 
+            transform: rotateX(60deg);
+            transform: rotateY(60deg);*/
+
+            /* Transforms ---- Scale: incerase the size on normal scale, x-scale, and y-scale
+            transform: scale(1.6);  Box Becomes 1.6x larger
+            transform: scaleX(1.6); Box Becomes 1.6x larger on x-axis
+            transform: scaleX(1.6); Box Becomes 1.6x larger on Y-axis  
+            Also use z-axis, 3D etc */
+
+            /* Transforms ---- Translate (Mostly used): Move elements from it's position on x-scale, y-scale and z-scale
+            transform: translate(45px);  Box Becomes 1.6x larger
+            transform: translateX(45px); Box Becomes 1.6x larger on x-axis
+            transform: TranslateY(45px); Box Becomes 1.6x larger on Y-axis  
+            Also use z-axis, 3D etc */
+
+            /*To apply all transform properties in one transform we can use */
+            transform: translate(45px) skew(30deg) rotate(30deg);
+            
+
+        }
+
+        .container {
+            height: 80vh;
+            width: 80vw;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            Box 1
+        </div>
+    </div>
+</body>
+
+</html>

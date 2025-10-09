@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshiyan Mairaj - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="left">
+            <a href="/">Arshiyan Mairaj</a>
+        </div>
+        <div class="right">
+            <a href="https://github.com/Arshiyan7" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/arshiyanmairaj/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a
+                href="mailto:your-email@gmail.com?subject=Let's%20Connect&body=Hi%20Arshiyan,%0AI%20would%20like%20to%20...">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-section section">
+            <div class="text">
+                <h1>Hi, I'm Arshiyan 👋</h1>
+                <p>A passionate Frontend Developer focused on building clean, responsive, and user-friendly websites.
+                    With a strong foundation in HTML, CSS, and JavaScript, I create visually appealing layouts that work
+                    seamlessly across devices. I’m currently learning JavaScript to bring interactivity and dynamic
+                    features to my projects. My goal is to write clean, maintainable code and continuously improve my
+                    skills to deliver high-quality web experiences.</p>
+                <div class="links">
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#testimony">
+                        <i class="fa-solid fa-pen"></i>
+                        <span>Testimony</span>
+                    </a>
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="headshot">
+                <img src="images/hero-headshot.webp" alt="my_profile">
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills-section section">
+            <h2>Skills</h2>
+            <div class="text">
+                <p>Proficient in HTML, CSS, and JavaScript for developing responsive, modern web pages.
+                    Skilled at creating clean, maintainable code and optimizing performance.
+                    Committed to delivering seamless, user-focused digital experiences.</p>
+            </div>
+            <div class="cells">
+                <div class="cell">
+                    <img src="images/html-logo.webp" alt="HTML logo">
+                    <span>HTML</span>
+                </div>
+                <div class="cell">
+                    <img src="images/css-logo.webp" alt="CSS logo">
+                    <span>CSS</span>
+                </div>
+                <div class="cell">
+                    <img src="images/javascript-logo.webp" alt="JavaScript logo">
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONY -->
+        <section id="testimony" class="testimony-section section">
+            <h2>Testimony</h2>
+            <div class="group">
+                <div class="person-details">
+                    <img src="images/Git.jpg" alt="my_profile">
+                    <p>Arshiyan Mairaj</p>
+                    <p>Frontend Developer</p>
+                </div>
+                <div class="text">
+                    <p>"I take pride in turning ideas into reality with creativity and attention to detail. I focus on
+                        delivering projects on time while keeping communication clear and efficient throughout the
+                        process. My goal is to exceed expectations and create meaningful results. I enjoy learning new
+                        tools and techniques to stay ahead of industry trends and continuously improve my work.
+                        Collaboration is key for me — I value teamwork, problem-solving, and building solutions that are
+                        both functional and visually appealing. Above all, I aim to craft digital experiences that are
+                        simple, impactful, and user-friendly."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section section">
+            <h2>Contact</h2>
+            <div class="group">
+                <div class="text">
+                    Have a project in mind or just want to connect? I’d love to hear from you! Whether it’s a
+                    collaboration, feedback, or a quick question, feel free to drop your details and message below I’ll
+                    get back to you as soon as possible.
+                </div>
+
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="10" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
