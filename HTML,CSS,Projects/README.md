@@ -1,4 +1,3 @@
-```markdown
 # HTML & CSS Practice Files + Projects
 
 ## Overview
@@ -11,4 +10,3 @@ This folder documents my journey in learning HTML (HyperText Markup Language) an
 
 ## Goal
 The goal of this collection is to illustrate how web design concepts translate into functional, responsive code. Each project serves as both a reference and a record of progress in mastering core front-end development skills.
-```
