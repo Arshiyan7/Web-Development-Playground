@@ -1,4 +1,3 @@
-```markdown
 # JavaScript Practice Files + Projects
 
 ## Overview
@@ -11,4 +10,3 @@ This folder is dedicated to learning and practicing JavaScript through direct ap
 
 ## Goal
 The goal of this folder is to provide a structured path for mastering JavaScript fundamentals and applying them in real-world projects. Each file contributes to building stronger problem-solving and coding skills.
-```
