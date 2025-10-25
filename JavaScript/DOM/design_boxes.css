@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.boxes {
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+#changeColors {
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: royalblue;
+    color: white;
+    border-radius: 10px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+#changeColors:hover {
+    background-color: rgb(6, 43, 155);
+}
+
+#changeColors:active {
+    background-color: rgb(47, 95, 241);
+}
