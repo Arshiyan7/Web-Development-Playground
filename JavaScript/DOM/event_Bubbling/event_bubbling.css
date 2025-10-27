@@ -1,0 +1,22 @@
+.child {
+    padding: 14px;
+    margin: 14px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container {
+    padding: 14px;
+    margin: 14px;
+    background-color: crimson;
+    cursor: pointer;
+}
+
+.childContainer {
+    padding: 14px;
+    margin: 14px;
+    background-color: royalblue;
+    cursor: pointer;
+}

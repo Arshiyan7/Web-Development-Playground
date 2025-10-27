@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <link rel="stylesheet" href="event_bubbling.css">
+</head>
+
+<body>
+    <!-- 
+    What is Event Bubbling?
+
+    Event Bubbling Example:
+    When you click on the ".child" element, the click event first triggers its own listener,
+    then it "bubbles up" to its parent elements — ".childContainer" and then ".container".
+    This means events move from the innermost (child) element outward to its ancestors,
+    unless stopped using event.stopPropagation().
+
+    Real-Life Analogy:
+    Imagine you live in Peshawar (child), which is in Pakistan (childContainer), which is in Asia (container).
+    When something happens in Peshawar (like a click event), it’s also part of Pakistan and Asia,
+    so the event naturally "bubbles up" — first handled by Peshawar, then Pakistan, then Asia.
+    Similarly, clicking the .child element triggers its event first,
+    then .childContainer, then .container — unless stopped using event.stopPropagation().
+    -->
+
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">This is a child container</div>
+        </section>
+    </div>
+
+   <script src="event_bubbling.js"></script>
+</body>
+
+</html>
