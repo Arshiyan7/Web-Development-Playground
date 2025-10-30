@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="call_back.js"></script> -->
+    <!-- <script src="promises.js"></script>  -->
+    <!-- <script src="practice.js"></script> -->
+    <!-- <script src="async_await.js"></script> -->
+    <!-- <script src="practice.js"></script> -->
+     <script src="fetchAPI.js"></script>
+
+    <h2>JavaScript Asynchronous Concepts</h2>
+
+    <h3>What is a Callback?</h3>
+    <p>
+        A <strong>callback</strong> is a function that is passed as an argument to another function and
+        is executed after a certain task is completed. It allows asynchronous behavior —
+        for example, running code after a delay or when data is fetched.
+    </p>
+
+    <pre><code>
+function doTask(callback) {
+  console.log("Task started...");
+  setTimeout(() => {
+    console.log("Task completed!");
+    callback(); // calls the function passed in
+  }, 2000);
+}
+
+doTask(() => console.log("Callback function executed!"));
+</code></pre>
+
+    <p>
+        Callbacks work, but they can become messy and hard to manage when you have multiple
+        asynchronous tasks depending on each other — this is called <strong>"callback hell"</strong>.
+    </p>
+
+    <hr>
+
+    <h3>What is a Promise?</h3>
+    <p>
+        A <strong>Promise</strong> is a special JavaScript object that represents a value that
+        may be available now, in the future, or never. It helps handle asynchronous operations
+        in a cleaner way compared to callbacks.
+    </p>
+
+    <pre><code>
+let promise = new Promise((resolve, reject) => {
+  let success = true;
+  if (success) resolve("Task done!");
+  else reject("Something went wrong!");
+});
+
+promise
+  .then(result => console.log(result))   // runs if resolved
+  .catch(error => console.log(error));   // runs if rejected
+</code></pre>
+
+    <p>
+        Promises make asynchronous code more readable and prevent deep nesting of callbacks.
+    </p>
+
+    <hr>
+
+    <h3>Why Use Promises Over Callbacks?</h3>
+    <p>
+        Using Promises provides:
+    </p>
+    <ul>
+        <li>Cleaner, more readable code</li>
+        <li>Better error handling with <code>.catch()</code></li>
+        <li>Avoidance of "callback hell" (nested callbacks)</li>
+        <li>Ability to chain multiple asynchronous tasks easily</li>
+    </ul>
+
+    <pre><code>
+// Instead of nested callbacks:
+doTask1(() => {
+  doTask2(() => {
+    doTask3(() => {
+      console.log("All done!");
+    });
+  });
+});
+
+// We can chain Promises:
+doTask1()
+  .then(doTask2)
+  .then(doTask3)
+  .then(() => console.log("All done!"));
+</code></pre>
+
+    <hr>
+
+    <h3> What are Async and Await?</h3>
+    <p>
+        <code>async</code> and <code>await</code> are modern JavaScript keywords that make
+        working with Promises easier and cleaner. They allow you to write asynchronous code
+        that looks and behaves like synchronous code.
+    </p>
+
+    <ul>
+        <li><strong>async</strong> – marks a function as asynchronous (it always returns a Promise).</li>
+        <li><strong>await</strong> – pauses the execution inside an async function until a Promise is resolved.</li>
+    </ul>
+
+    <pre><code>
+async function doChores() {
+  const task1 = await walkDog();
+  console.log(task1);
+
+  const task2 = await CleanTheKitchen();
+  console.log(task2);
+
+  const task3 = await ThrowOutTrash();
+  console.log(task3);
+
+  console.log("All tasks are finished!");
+}
+</code></pre>
+
+    <p>
+        This approach is more readable and avoids chaining with <code>.then()</code>,
+        while still handling asynchronous operations sequentially.
+    </p>
+
+    <hr>
+
+    <h3> Summary:</h3>
+    <ul>
+        <li><strong>Callback:</strong> Function passed inside another function — can get messy with many tasks.</li>
+        <li><strong>Promise:</strong> Cleaner way to handle asynchronous tasks with <code>.then()</code> and
+            <code>.catch()</code>.</li>
+        <li><strong>Async/Await:</strong> Simplified syntax for Promises — looks like normal code, easier to read and
+            manage.</li>
+    </ul>
+
+</body>
+
+</html>
