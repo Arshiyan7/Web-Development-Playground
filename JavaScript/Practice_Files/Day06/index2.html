@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Traversal Practice</title>
+  <style>
+    .card, .wrapper, .parent, .hover-section {
+      border: 1px solid #ccc;
+      margin: 10px;
+      padding: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px;
+      background: #f0f0f0;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Q1 -->
+  <div class="parent">
+    <h3>Parent Section</h3>
+    <button class="color-btn">Change Parent Color</button>
+  </div>
+
+  <!-- Q2 -->
+  <ul class="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <!-- Q3 -->
+  <div class="hover-section">
+    <ul>
+      <li>Item A</li>
+      <li>Item B</li>
+      <li>Item C</li>
+    </ul>
+  </div>
+
+  <!-- Q4 -->
+  <div class="wrapper">
+    <div class="inner-box">
+      <div class="content">
+        <p>Nested Paragraph for Closest Test</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="card">
+    <h4>Card Title</h4>
+    <p>Card description...</p>
+    <button class="action-btn">Modify Card</button>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
