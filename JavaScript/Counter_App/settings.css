@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom right, #f8f8ff, #ececff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    background: linear-gradient(135deg, #e6e6e6, #ffffff);
+    border-radius: 30px;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    transition: background 0.4s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    top: 3px;
+
+    background: linear-gradient(135deg, #ffbb33, #ffdd66); 
+    border-radius: 50%;
+    transition: 0.4s ease;
+    box-shadow: 0px 0px 6px rgba(255, 200, 50, 0.7);
+}
+
+.toggle input:checked + .slider {
+    background: linear-gradient(135deg, #3a3a3a, #1f1f1f);
+}
+
+.toggle input:checked + .slider::before {
+    transform: translateX(30px);
+    background: linear-gradient(135deg, #cfcfcf, #e5e5e5); 
+    box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.7);
+}
+
+body {
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.light-mode {
+    background: linear-gradient(to bottom right, #f8f8ff, #ececff);
+    color: #111;
+}
+
+body.dark-mode {
+    background: linear-gradient(to bottom right, #111, #222);
+    color: #eee;
+}
+
+.container .other-themes span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+.container .other-themes span:nth-of-type(1) {
+    background: linear-gradient(135deg, #6a5af9, #8c7bff);
+}
+
+.container .other-themes span:nth-of-type(2) {
+    background: linear-gradient(135deg, #ff7a7a, #ff3f3f);
+}
+
+.container .other-themes span:nth-of-type(3) {
+    background: linear-gradient(135deg, #ffb86c, #ff9f4a);
+}
+
+.container .other-themes span:nth-of-type(4) {
+    background: linear-gradient(135deg, #4cd4c0, #30b8a6);
+}
+
+.container .other-themes span:nth-of-type(5) {
+    background: linear-gradient(135deg, #48c6ff, #0099ff);
+}
+

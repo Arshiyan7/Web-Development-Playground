@@ -2,6 +2,11 @@ body {
     color: #fff;
 }
 
+header h1{
+    text-align: center;
+    transform: translateY(10rem);
+}
+
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -39,20 +44,22 @@ body {
 }
 
 /* HUD (Heads up display) */
-#hud{
+#hud {
     display: flex;
     justify-content: space-between;
 }
-.hud-prefix{
+
+.hud-prefix {
     text-align: center;
     font-size: 2rem;
 }
+
 .hud-main-text {
     text-align: center;
 }
 
 
-#progress-bar{
+#progress-bar {
     width: 20rem;
     height: 3rem;
     border: 0.2rem solid rgb(11, 223, 36);
@@ -60,13 +67,53 @@ body {
     border-radius: 50px;
     overflow: hidden;
 }
-#progressBar-full{
+
+#progressBar-full {
     height: 100%;
     background-color: rgb(11, 223, 36);
     width: 0%;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 800px) {
+    #hud {
+        margin: 0 0.8rem;
+    }
+
+    #question {
+        font-size: 4.4rem;
+    }
+
     .choice-container {
-        max-width: 40rem;
+        min-width: auto;
+        max-width: 75rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    #question {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #question {
+        font-size: 3.8rem;
+    }
+}
+@media screen and (max-width: 460px) {
+    #question {
+        font-size: 3.6rem;
+    }
+}
+@media screen and (max-width: 435px) {
+    #question {
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #question {
+        font-size: 3rem;
     }
 }

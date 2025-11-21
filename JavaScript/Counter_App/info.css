@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298); /* deep blue-purple gradient */
+    padding: 2rem;
+}
+
+.info-page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.15));
+    backdrop-filter: blur(12px); 
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    color: #f0f0f0;
+}
+
+.info-page h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #833AB4, #FD1D1D, #45FCED);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.info-page h2 {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(90deg, #45FCED, #FD1D1D);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.info-page p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+.info-page ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-page ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    list-style: none;
+}
+
+.info-page ul li::before {
+    content: "•";
+    color: #45FCED; 
+    position: absolute;
+    left: 0;
+}
+
+.info-page footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 2rem;
+}

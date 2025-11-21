@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #f8f8ff, #ececff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+#icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+#icons i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    transition: 0.2s ease;
+}
+
+#icons i:hover {
+    transform: scale(1.15);
+    color: #000;
+}
+
+h1 {
+    font-size: 8rem;
+    margin-bottom: 3rem;
+    color: #1e1e1e;
+    transition: 0.2s ease;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+#buttons i {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#btn-design1 {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+#btn-design1:hover {
+    background-color: #333;
+    transform: scale(1.08);
+}
+
+#btn-design2 {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#btn-design2:hover {
+    background-color: #43A047;
+    transform: scale(1.08);
+}

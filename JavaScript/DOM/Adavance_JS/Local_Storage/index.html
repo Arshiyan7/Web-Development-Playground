@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Local Storage</h1>
+    <p>
+        <b>Local Storage:</b> Local Storage is a web storage feature in browsers that allows websites to store data
+        locally on the user's computer.
+        Data saved in Local Storage persists even after closing the browser and can be accessed using JavaScript with
+        <code>localStorage.setItem('key', 'value')</code> to save,
+        <code>localStorage.getItem('key')</code> to retrieve,
+        <code>localStorage.removeItem('key')</code> to remove a specific item, and
+        <code>localStorage.clear()</code> to delete all stored data.
+    </p>
+
+    <h2>Local Storage Example</h2>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="saveName()">Save Name</button>
+    <button onclick="showName()">Show Name</button>
+    <button onclick="removeName()">Remove Name</button>
+    <button onclick="clearStorage()">Clear All</button>
+
+    <p id="display"></p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
