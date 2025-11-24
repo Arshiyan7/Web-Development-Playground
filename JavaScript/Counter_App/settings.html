@@ -27,6 +27,31 @@
             <span></span>
             <span></span>
         </div>
+        <div class="count">
+            <p>How much should the counter jump?</p>
+            <label for="myDropdown">Pick your step size:</label>
+            <select id="myDropdown" name="myOption">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+        <div class="limit">
+            <p>Set a maximum count</p>
+            <label for="user_input">Your maximum count:</label>
+            <div class="input-row">
+                <input id="user_input" type="number" min="1" step="1" placeholder="e.g. 100">
+                <button>Set Limit</button>
+            </div>
+            <small>Only positive numbers are allowed</small>
+        </div>
+        <div class="font">
+            <p>Select font size:</p>
+            <span>Small</span>
+            <span>Medium(default)</span>
+            <span>arge</span>
+            <span>Extra large</span>
+        </div>
     </div>
 </body>
 
