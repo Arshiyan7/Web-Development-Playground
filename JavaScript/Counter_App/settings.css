@@ -10,10 +10,34 @@ body {
     background: linear-gradient(to bottom right, #f8f8ff, #ececff);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    /* align at top for longer pages */
+    min-height: 100vh;
     font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    /* some spacing from edges */
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
+/* Container styling */
+.container {
+    padding: 2rem;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Equal spacing between feature divs */
+.container>div {
+    margin-bottom: 30px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Theme toggle styling */
 .toggle {
     position: relative;
     width: 60px;
@@ -30,8 +54,10 @@ body {
     background: linear-gradient(135deg, #e6e6e6, #ffffff);
     border-radius: 30px;
     cursor: pointer;
-    top: 0; left: 0;
-    right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     transition: background 0.4s ease;
 }
 
@@ -42,27 +68,23 @@ body {
     width: 24px;
     left: 3px;
     top: 3px;
-
-    background: linear-gradient(135deg, #ffbb33, #ffdd66); 
+    background: linear-gradient(135deg, #ffbb33, #ffdd66);
     border-radius: 50%;
     transition: 0.4s ease;
     box-shadow: 0px 0px 6px rgba(255, 200, 50, 0.7);
 }
 
-.toggle input:checked + .slider {
+.toggle input:checked+.slider {
     background: linear-gradient(135deg, #3a3a3a, #1f1f1f);
 }
 
-.toggle input:checked + .slider::before {
+.toggle input:checked+.slider::before {
     transform: translateX(30px);
-    background: linear-gradient(135deg, #cfcfcf, #e5e5e5); 
+    background: linear-gradient(135deg, #cfcfcf, #e5e5e5);
     box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.7);
 }
 
-body {
-    transition: background 0.4s ease, color 0.4s ease;
-}
-
+/* Dark/Light mode */
 body.light-mode {
     background: linear-gradient(to bottom right, #f8f8ff, #ececff);
     color: #111;
@@ -73,6 +95,7 @@ body.dark-mode {
     color: #eee;
 }
 
+/* Other themes */
 .container .other-themes span {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -102,5 +125,111 @@ body.dark-mode {
 
 .container .other-themes span:nth-of-type(5) {
     background: linear-gradient(135deg, #48c6ff, #0099ff);
+}
+
+/* Count section */
+.count p {
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+}
+
+.count label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.count #myDropdown {
+    padding: 0.4rem 0.6rem;
+    font-weight: normal;
+    font-size: 1rem;
+    color: rgb(96, 96, 96);
+    border-radius: 0.3rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+    min-width: 100px;
+}
+
+.count #myDropdown:hover,
+.count #myDropdown:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.limit p {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.limit label {
+    color: rgb(96, 96, 96);
+}
+
+.limit .input-row input {
+    padding: 0.2rem;
+    width: 70%;
+    height: 30px;
+    border: 1px solid #939393;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.limit .input-row button {
+    padding: 0.3rem;
+    width: 25%;
+    border: 1px solid #ddd;
+    background-color: #E62020;
+    border-radius: 5px;
+    color: white;
+    height: 30px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.limit .input-row input:hover,
+.limit .input-row input:focus {
+    border-color: #4f4f4f;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.limit .input-row button:hover {
+    border-color: #878787;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    outline: none;
+    background-color: #cf2323;
+    cursor: pointer;
+}
+
+.limit small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.limit .input-row button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.font p{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.font span{
+    border: 1px solid #ddd;
+    padding: 0.3rem 0.2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.font span:hover{
+    cursor: pointer;
+    background-color: #DCDCDC;
 }
 
