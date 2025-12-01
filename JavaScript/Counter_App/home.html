@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="icons" class="justify-center gap">
+            <a href="/info.html"><i id="info" class="fa-solid fa-circle-info"></i></a>
+
+            <i id="open-settings" class="fa-solid fa-gear"></i>
+
+            <i id="reset" class="fa-solid fa-arrow-rotate-right"></i>
+        </div>
+
+        <div class="counter-wrapper">
+            <h1 id="counter">0</h1>
+        </div>
+
+        <div id="buttons" class="justify-center space-between">
+            <i id="btn-design1" class="fa-solid fa-minus"></i>
+            <i id="btn-design2" class="fa-solid fa-plus"></i>
+        </div>
+    </div>
+
+
+    <!--   SETTINGS POPUP MODAL   -->
+    <div id="settings-popup" class="hidden">
+        <div class="settings-container">
+            <h3>Settings</h3>
+            <!-- Close button -->
+            <i id="close-settings" class="fa-solid fa-xmark"></i>
+
+            <div class="light-dark">
+                <p id="theme-text">Dark/Light mode:</p>
+
+                <label class="toggle">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="other-themes">
+                <p id="other-theme-txt">Other Themes:</p>
+                <span data-theme="theme-purple"></span>
+                <span data-theme="theme-red"></span>
+                <span data-theme="theme-orange"></span>
+                <span data-theme="theme-teal"></span>
+                <span data-theme="theme-blue"></span>
+            </div>
+
+
+            <div class="count">
+                <p>How much should the counter jump?</p>
+                <label for="myDropdown">Pick your step size:</label>
+                <select id="myDropdown" name="myOption">
+                    <option value="1">1(default)</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <div class="limit">
+                <p>Set a maximum count</p>
+                <label for="user_input">Your maximum count:</label>
+                <div class="input-row">
+                    <input id="user_input" type="number" min="1" step="1" placeholder="e.g. 100">
+                    <button id="setLimitBtn">Set Limit</button>
+                </div>
+                <small>Only positive numbers are allowed</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="home.js"></script>
+
+</body>
+
+</html>
