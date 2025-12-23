@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(228, 228, 255);
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+    color: navy;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    background-color: navy;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: rgb(206, 206, 206);
+    transition: 0.3s ease;
+}
+
+main section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: navy;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+main section article h3 {
+    color: navy;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 5px;
+}
+
+main section article p {
+    line-height: 22px;
+    font-size: 1.05rem;
+    max-width: 1200px;
+    margin-bottom: 5px;
+}
+
+main section article time {
+    color: rgb(230, 0, 0);
+}
+
+main section article {
+    padding: 10px;
+}
+
+hr {
+    max-width: 1200px;
+    opacity: 0.4;
+}
+
+aside h2 {
+    margin-top: 20px;
+    text-align: left;
+}
+
+aside section p {
+    font-size: 1.05rem;
+    max-width: 1200px;
+    text-align: center;
+    margin-left: 15%;
+}
+
+aside section ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+aside section ul li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 10px;
+}
+
+aside section ul li:first-child {
+    border: 1px solid rgb(255, 82, 82);
+}
+
+aside section ul li:nth-child(2) {
+    border: 1px solid rgb(102, 0, 255);
+}
+
+aside section ul li:nth-child(3) {
+    border: 1px solid rgb(220, 220, 30);
+}
+
+img {
+    width: 40px;
+}
+
+aside section ul li:hover {
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    transform: translateY(-10%);
+}
+
+aside section ul li:first-child:hover {
+    background-color: rgb(255, 82, 82);
+}
+
+aside section ul li:nth-child(2):hover {
+    background-color: rgb(102, 0, 255);
+}
+
+aside section ul li:nth-child(3):hover {
+    background-color: rgb(228, 228, 9);
+}
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
