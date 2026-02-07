@@ -77,15 +77,22 @@ button:active{
 }
 #bookmark-list li:hover{
     transform: translateX(3px);
+    cursor: pointer;
 }
-#bookmark-list #bookmark-btn{
+#bookmark-list button{
     background-color: white;
     color: black;
     font-weight: bold;
     transition: background-color 0.3s ease;
     padding: 5px 10px ;
 }
-#bookmark-list #bookmark-btn:hover{
+#bookmark-list button:hover{
     background-color: #e53935;
     color: white;
+}
+#bookmark-list a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
 }
