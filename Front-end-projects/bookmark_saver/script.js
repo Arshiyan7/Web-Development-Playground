@@ -2,6 +2,7 @@ const BookmarkName = document.querySelector('#bookmark-name')
 const BookmarkUrl = document.querySelector('#bookmark-url')
 const addBookmarkBtn = document.querySelector('#add_btn')
 const bookmarkList = document.querySelector("#bookmark-list")
+const remove_all = document.querySelector('#remove')
 
 document.addEventListener("DOMContentLoaded",loadBookmarks())
 
@@ -31,9 +32,13 @@ function addBookmark(name,url){
     link.textContent = name
     link.target = "_blank"
 
-    const removeButton = document.createElement('button')
-    removeButton.textContent = "Remove"
+    const removeButton = document.createElement('i')
+    removeButton.classList.add('fa-solid','fa-trash')
     removeButton.addEventListener('click',function(){
+        bookmarkList.removeChild(li)
+        removeBookmarkStorage(name,url)
+    })
+    remove_all.addEventListener('click',function(){
         bookmarkList.removeChild(li)
         removeBookmarkStorage(name,url)
     })
