@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #FF3131;
+    --primary-light: #9775fa;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --gray: #868e96;
+    --danger: #fa5252;
+    --success: #40c057;
+    --border: #e9ecef;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f1f3f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+    color: var(--dark);
+}
+
+.app {
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    border: 1px solid red;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 20px 25px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+header p{
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.todo-input{
+    display: flex;
+    gap: 10px;
+    padding: 20px 25px;
+    background-color: var(--light);
+    border-bottom: 1px solid var(--border);
+}
+
+.todo-input input{
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
+    font-size: 1rem;
+    transition: all 0.2s;
+    border-radius: 6px;
+}
+.todo-input input:focus{
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.todo-input button{
+    background-color: rgb(120, 120, 120) ;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.todo-input button:hover{
+    background-color: rgb(64, 64, 64);
+}
+
+.filters{
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid var(--border);
+    padding: 15px 25px;
+}
+.filter{
+    padding: 5px 3px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    color: var(--gray);
+}
+.filter:hover{
+    color: var(--primary);
+}
+.filter.active{
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    font-weight: 500;
+}
+
+.todos-container{
+    padding: 15px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.todos-list{
+    list-style-type: none;
+}
+.todos-item{
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+.todos-item:hover{
+    background-color: var(--light);
+}
