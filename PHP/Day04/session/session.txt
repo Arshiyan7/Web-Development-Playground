@@ -1,0 +1,6 @@
+when you make pages and make a page like logout and then you add 
+session unset and destroy in that page when you visit that page before visiting the information page the
+session will be unset and after that visiting the session with information you won't see any data,
+e.g.: 
+home screen -> Login page session clicked (You see login info)
+home screen -> Logout page session clicked (session variables will be removed and destroyed) -> login page(You will see no login page you will notice else block telling "No info present or session destroyed")

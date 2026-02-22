@@ -1,0 +1,2 @@
+Pretty basic stuff i have already did those in many programming languages since i've knowledge of JavaScript so they're 
+easy so we won't be covering them in specific files 

@@ -1,0 +1,22 @@
+data stored on the client side rather than on server(session)
+data stored by the browser
+cookies stays even when brower is closed unlike session that are destroyed
+uses of cookies involve:
+ - remembering user login info 
+ - storing user prefrence (theme, language , fontsize)
+ - tracking user behaviour
+
+to set cookie we use setcookie() and it must be call before the html just like session start
+Cookie = “Hey browser, remember this data for me until this time.”
+difference between session and cookies is that: 
+SESSION : “one visit, short-term memory”
+COOKIES : “remember me for a set time”
+
+Session → You walk into a café, and they give you a token for the day. When you leave, the token expires.
+
+Cookie → The café writes your favorite drink on a sticky note and says, “Keep it for 7 days.” Even if you leave and come back tomorrow, they still know your preference.
+
+BOTH cookies and session are used with each other side by side 
+in real world websites
+session takes the data and then cookie sets it for sometimes so browser can remember
+e.g. a form where a button is there with "remember me" when we check it we set a cookie after session 

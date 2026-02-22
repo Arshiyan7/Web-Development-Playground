@@ -1,0 +1,4 @@
+lets suppose that we have a different name in the action method of form
+and our file name is different ofc our file will be posted to a different page that doesn't exist
+in order to deal with that so HTML form can get the form name automatically we use: 
+<?php htmlspecialchars($_SERVER['PHP_SELF'])?> this helps HTML to get form action automatically without setting it by default everytime
