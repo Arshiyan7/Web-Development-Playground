@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>Country Explorer</h1>
+            <p>Search any country to see details</p>
+        </div>
+        <div class="search">
+            <input type="text" id="country_input" placeholder="e.g. Pakistan, Japan, Germany...">
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="result">
+            <div class="country-header">
+                <div id="flag">Country Flag will come here</div>
+                <div class="country-info">
+                    <h2 id="country-name">Full name of country</h2>
+                    <div class="region-subregion">
+                        <p id="region">Region will come here</p>
+                        <p id="sub-region">Sub Region will come here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="country-details">
+
+                <div class="info-item">
+                    <p class="label">Capital</p>
+                    <p class="value" id="capital">Islamabad</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="label">Population</p>
+                    <p class="value" id="population">231 Million</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="label">Region</p>
+                    <p class="value" id="region-detail">Asia</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="label">Sub Region</p>
+                    <p class="value" id="sub-region-detail">South Asia</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="label">Currency</p>
+                    <p class="value" id="currency">PKR</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="label">Languages</p>
+                    <p class="value" id="languages">Urdu, English</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
