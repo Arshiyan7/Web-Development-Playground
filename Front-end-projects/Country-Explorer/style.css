@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --body-background : #1a1a1a;
+    --card-background : #242424;
+    --inner-bg : #2e2e2e;
+    --primary-text : #ffffff;
+    --secondary-text : #8a8a8a;
+    --button : #e87c2e;
+    --border : #333333;
+    --border-radius : 15px;
+}
+body{
+    color: var(--primary-text);
+    font-family: 'DM Sans',sans-serif;
+    background: var(--body-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    border: 2px solid var(--border);
+    padding: 4rem;
+    width: 700px;
+    border-radius: var(--border-radius);
+}
