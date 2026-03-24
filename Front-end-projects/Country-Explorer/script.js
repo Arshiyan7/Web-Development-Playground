@@ -11,7 +11,8 @@ const areaDetail = document.getElementById('area-detail')
 const currency = document.getElementById('currency')
 const languages = document.getElementById('languages')
 
-searchBtn.addEventListener('click', function () {
+searchBtn.addEventListener('click', function (e) {
+    e.preventDefault()
     const value = input.value.trim()
     fetchCountry(value)
 })
@@ -31,9 +32,9 @@ async function fetchCountry(countryName) {
 function DisplayData(data) {
     capital.textContent = data.capital[0]
     countryName.textContent = data.name.common
-    region.textContent = data.region
+    region.textContent = data.region 
     areaDetail.textContent = `${data.area} km²`
-    subRegion.textContent = data.subregion
+    subRegion.textContent = ` • ${data.subregion}`
     population.textContent = data.population
     callDetail.textContent = `${data.idd.root}${data.idd.suffixes}` // use . operator when the name key is fixed like here root and suffixes were fixed
     currency.textContent = `${Object.values(data.currencies)[0].name} (${Object.values(data.currencies)[0].symbol})` // use object.values when the key is unpredictable like here when you extract the currency each country currency key will change
