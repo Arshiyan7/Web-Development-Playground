@@ -10,17 +10,34 @@ const callDetail = document.getElementById('call-detail')
 const areaDetail = document.getElementById('area-detail')
 const currency = document.getElementById('currency')
 const languages = document.getElementById('languages')
+const error_msg = document.querySelector('#error-text')
+const resultCard = document.getElementById('result')
 
-searchBtn.addEventListener('click', function (e) {
-    e.preventDefault()
+function input_value() {
     const value = input.value.trim()
+    if (value === '') { return }
     fetchCountry(value)
+}
+searchBtn.addEventListener('click', function () {
+    input_value()
+})
+input.addEventListener('keydown',function(e){
+    if (e.key === 'Enter') {
+        input_value()
+    }
 })
 async function fetchCountry(countryName) {
     try {
         const country_data = await fetch(
             `https://restcountries.com/v3.1/name/${countryName}?fields=name,capital,region,subregion,population,currencies,languages,flags,area,idd`
         );
+        if (!country_data.ok) {
+            error_msg.style.display = 'block'
+            resultCard.style.display = 'none'
+            return
+        }
+        error_msg.style.display = 'none'
+        resultCard.style.display = 'block'
         const data = await country_data.json();
         console.log(data[0]);
         DisplayData(data[0])
@@ -32,10 +49,10 @@ async function fetchCountry(countryName) {
 function DisplayData(data) {
     capital.textContent = data.capital[0]
     countryName.textContent = data.name.common
-    region.textContent = data.region 
+    region.textContent = data.region
     areaDetail.textContent = `${data.area} km²`
     subRegion.textContent = ` • ${data.subregion}`
-    population.textContent = data.population
+    population.textContent = data.population.toLocaleString()
     callDetail.textContent = `${data.idd.root}${data.idd.suffixes}` // use . operator when the name key is fixed like here root and suffixes were fixed
     currency.textContent = `${Object.values(data.currencies)[0].name} (${Object.values(data.currencies)[0].symbol})` // use object.values when the key is unpredictable like here when you extract the currency each country currency key will change
     flag.innerHTML = `<img src="${data.flags.png}">`
