@@ -100,31 +100,62 @@ body {
     border-radius: var(--border-radius);
     margin-top: 20px;
     padding: var(--primary-padding);
+    display: none;
 }
 
 .country-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: var(--primary-padding);
     border-bottom: 1px solid var(--border);
     margin-bottom: 20px;
 }
 
 .flag_design>img {
     border-radius: 6px;
-    width: 200px;
-    height: 120px;
+    width: 150px;
+    height: 90px;
     background-color: var(--inner-bg);
     border-radius: 6px;
     padding: 5px;
 }
+
 .country-info {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex-grow: 1fr;
+    padding-left: 30px;
 }
-.region-subregion{
+
+.region-subregion {
     display: flex;
     gap: 5px;
+}
+
+.country-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.info-item{
+    border: 1px solid var(--border);
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+}
+.info-item >.label{
+    font-weight: 400;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    color: var(--secondary-text);
+}
+.info-item >.value{
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary-text);
+}
+#error-text{
+    margin-left: 30px;
+    color: red;
+    display: none;
 }
