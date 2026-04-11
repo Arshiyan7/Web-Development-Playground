@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-background: #1a1a1a;
+    --card-background: #242424;
+    --inner-bg: #2e2e2e;
+    --primary-text: #e8eaf0;
+    --secondary-text: #8a8a8a;
+    --accent: #38b2ac;
+    --next-prayer-bg: #1a2a38;
+    --next-prayer-border: #2a4a60;
+    --border: #333333;
+    --border-radius: 15px;
+    --primary-padding: 15px 25px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--body-background);
+    color: var(--primary-text);
+}
+
+.main-container {
+    border: 2px solid var(--border);
+    padding: 4rem;
+    border-radius: 10px;
+    width: 600px;
+}
