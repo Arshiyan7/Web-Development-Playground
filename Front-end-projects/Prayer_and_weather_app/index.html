@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather + Prayer App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="city-info">
+                <p id="city-name" class="city-name">Rawalpindi</p>
+                <p id="current-date" class="current-date">Friday, April 10, 2026</p>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fa-solid fa-moon"></i> Dark
+            </button>
+        </div>
+
+        <!-- Weather Section -->
+        <div class="weather-card">
+            <p class="section-label">Current weather</p>
+            <div class="weather-main">
+                <h1 id="temperature">28°C</h1>
+                <div class="weather-condition">
+                    <p id="condition">Partly Cloudy</p>
+                    <p id="feels-humidity">Feels like 31°C &middot; 62% Humidity</p>
+                </div>
+            </div>
+            <div class="weather-stats">
+                <div class="stat-card">
+                    <p><i class="fa-solid fa-wind"></i> Wind</p>
+                    <p id="wind-speed">14 km/h</p>
+                </div>
+                <div class="stat-card">
+                    <p><i class="fa-solid fa-sun"></i> UV Index</p>
+                    <p id="uv-index">6 &middot; High</p>
+                </div>
+                <div class="stat-card">
+                    <p><i class="fa-solid fa-mountain-sun"></i> Sunrise</p>
+                    <p id="sunrise-time">5:54 AM</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Next Prayer Highlight -->
+        <div class="next-prayer-card" id="next-prayer-card">
+            <div class="next-prayer-info">
+                <p class="section-label">Next prayer</p>
+                <p id="next-prayer-name">Asr &middot; in 1h 24min</p>
+            </div>
+            <p id="next-prayer-time">4:35 PM</p>
+        </div>
+
+        <!-- All Prayer Times -->
+        <div class="prayers-card">
+            <p class="section-label">Prayer times</p>
+            <div class="prayers-list">
+                <div class="prayer-row" id="prayer-fajr">
+                    <p>Fajr</p>
+                    <p id="time-fajr">5:02 AM</p>
+                </div>
+                <div class="prayer-row" id="prayer-zuhr">
+                    <p>Zuhr</p>
+                    <p id="time-zuhr">12:14 PM</p>
+                </div>
+                <div class="prayer-row" id="prayer-asr">
+                    <p>Asr</p>
+                    <p id="time-asr">4:35 PM</p>
+                </div>
+                <div class="prayer-row" id="prayer-maghrib">
+                    <p>Maghrib</p>
+                    <p id="time-maghrib">6:48 PM</p>
+                </div>
+                <div class="prayer-row" id="prayer-isha">
+                    <p>Isha</p>
+                    <p id="time-isha">8:10 PM</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
