@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 * {
     padding: 0;
     margin: 0;
@@ -25,11 +27,132 @@ body {
     min-height: 100vh;
     background-color: var(--body-background);
     color: var(--primary-text);
+    font-family: 'Inter', sans-serif;
 }
 
 .main-container {
     border: 2px solid var(--border);
-    padding: 4rem;
+    padding: 1.5rem;
     border-radius: 10px;
-    width: 600px;
+    width: 500px;
+}
+
+.header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header .city-info .city-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.header .city-info .current-date {
+    opacity: 0.5;
+    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+    font-weight: 200;
+}
+
+.header .theme-toggle {
+    padding: 15px 25px;
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.header .fa-moon {
+    color: #FECD6A;
+    margin-right: 5px;
+}
+
+.weather-card {
+    border: 1px solid var(--border);
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    background: var(--card-background);
+}
+
+.weather-card .section-label {
+    font-size: 1.1rem;
+    opacity: 0.5;
+    font-weight: 200;
+}
+
+.weather-card .weather-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.weather-card .weather-main h1 {
+    font-size: 3.2rem;
+}
+
+.weather-card .weather-condition #condition {
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.weather-card .weather-condition #feels-humidity {
+    font-weight: 300;
+    opacity: 0.5;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.weather-card .weather-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.weather-card .weather-stats .stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.weather-card .weather-stats .stat-card {
+    border: 1px solid var(--border);
+    background: var(--inner-bg);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+
+
+.weather-card .weather-stats .stat-card>p:first-child {
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.weather-card .weather-stats .stat-card>p:nth-child(2) {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.stat-card.wind i {
+    color: #4a9eff;
+}
+
+.stat-card.uv i {
+    color: #f0a500;
+}
+
+.stat-card.sunrise i {
+    color: #ffcd3c;
+}
+.stat-card i {
+    margin-right: 6px;
 }
