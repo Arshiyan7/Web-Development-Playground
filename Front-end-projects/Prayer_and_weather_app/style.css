@@ -65,6 +65,7 @@ body {
     border-radius: 8px;
     border: 1px solid var(--border);
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .header .fa-moon {
@@ -114,22 +115,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
+
 .weather-card .weather-stats .stat-card {
+    flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-.weather-card .weather-stats .stat-card {
     border: 1px solid var(--border);
     background: var(--inner-bg);
     padding: 10px 20px;
     border-radius: 8px;
 }
-
-
 
 .weather-card .weather-stats .stat-card>p:first-child {
     font-weight: 300;
@@ -153,6 +154,67 @@ body {
 .stat-card.sunrise i {
     color: #ffcd3c;
 }
+
 .stat-card i {
     margin-right: 6px;
+}
+
+.next-prayer-card {
+    padding: var(--primary-padding);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg,
+            rgba(20, 50, 70, 0.7),
+            rgba(30, 70, 100, 0.5));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.next-prayer-card .next-prayer-info p:first-child {
+    font-weight: 200;
+    letter-spacing: 0.8px;
+    opacity: 0.6;
+    margin-bottom: 5px;
+}
+
+.next-prayer-card .next-prayer-info p:nth-child(2) {
+    font-size: 1.05rem;
+}
+
+.next-prayer-card>p {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.prayers-card {
+    padding: var(--primary-padding);
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+}
+
+.prayers-card .prayer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--primary-padding);
+    font-size: 1.05rem;
+}
+
+hr {
+    opacity: 0.03;
+}
+
+.prayers-card .prayer-row p:nth-child(2) {
+    opacity: 0.6;
+    font-weight: 300;
+}
+
+.prayers-card .prayers-list #prayer-asr {
+    border-left: 3px solid var(--accent);
+    color: var(--accent);
+    padding-left: 22px;
 }
