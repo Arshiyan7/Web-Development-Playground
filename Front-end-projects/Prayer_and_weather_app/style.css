@@ -20,6 +20,39 @@
     --primary-padding: 15px 25px;
 }
 
+/* For light theme */
+body.light {
+    --body-background: #f0f2f5;
+    --card-background: #ffffff;
+    --inner-bg: #f5f7fa;
+    --primary-text: #1a1a1a;
+    --secondary-text: #555555;
+    --border: #dde1e7;
+    --next-prayer-bg: #e8f4fd;
+    --next-prayer-border: #b3d4ed;
+}
+/* adjusting the opacity for the elements in light mode */
+body.light .header .city-info .current-date,
+body.light .weather-card .section-label,
+body.light .prayers-card .section-label,
+body.light .next-prayer-card .section-label,
+body.light .next-prayer-card .next-prayer-info p:first-child {
+    opacity: 1;
+    color: #888888;
+    font-weight: 400;
+}
+/* Next prayer gradient setting for light theme */
+body.light .next-prayer-card {
+    background: linear-gradient(135deg,
+            rgba(156, 208, 235, 0.5),
+            rgba(200, 230, 250, 0.4));
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+body.light .theme-toggle:hover{
+    background-color: #d6d6d6;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -61,14 +94,19 @@ body {
 .header .theme-toggle {
     padding: 15px 25px;
     background: transparent;
-    color: white;
+    color: var(--primary-text);
     border-radius: 8px;
     border: 1px solid var(--border);
     font-size: 0.9rem;
     cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 18px;
+}
+.header .theme-toggle:hover {
+    background-color: #333333;
 }
 
-.header .fa-moon {
+.header .fa-sun {
     color: #FECD6A;
     margin-right: 5px;
 }
@@ -212,13 +250,18 @@ hr {
     font-weight: 300;
 }
 
-.prayers-card .prayers-list #prayer-asr {
+.active-prayer {
     border-left: 3px solid var(--accent);
     color: var(--accent);
     padding-left: 22px;
 }
 
-.prayers-card .prayers-list #prayer-asr p {
+.prayers-card .prayer-row p:nth-child(2) {
+    opacity: 0.6;
+    font-weight: 200;
+}
+
+.prayers-card .prayer-row.active-prayer p:nth-child(2) {
     color: var(--accent);
     font-weight: 500;
     opacity: 1;
