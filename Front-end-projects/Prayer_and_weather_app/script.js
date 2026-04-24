@@ -22,6 +22,17 @@ const timeAsr = document.getElementById('time-asr');
 const timeMaghrib = document.getElementById('time-maghrib');
 const timeIsha = document.getElementById('time-isha');
 
+themeToggle.addEventListener('click',function(){
+    if (document.body.classList.contains('light')) {
+        document.body.classList.remove('light')
+        themeToggle.textContent = 'Dark'
+    }
+    else{
+        document.body.classList.add('light')
+        themeToggle.textContent = '' //continue from here -> change sun to moon here
+    }
+})
+
 
 async function fetchWeather() {
     const ApiKey = 'f1905524d76ec4a940151c5a40369c59'
@@ -88,6 +99,7 @@ function displayAll(weather, adhan) {
     timeAsr.textContent = convertTo12hr(adhan.data.timings.Asr)
     timeMaghrib.textContent = convertTo12hr(adhan.data.timings.Maghrib)
     timeIsha.textContent = convertTo12hr(adhan.data.timings.Isha)
+    setNextPrayer(adhan)
 }
 function convertTo12hr(time) {
     const [hours, minutes] = time.split(':')
@@ -96,6 +108,28 @@ function convertTo12hr(time) {
     const hrs12 = hrs % 12 || 12
     return `${hrs12}:${minutes} ${ampm}`
 }
+function timeToMinutes(time) {
+    const [hrs, mins] = time.split(':')
+    return parseInt(hrs) * 60 + parseInt(mins)
+}
+function setNextPrayer(adhan) {
+    const prayers = [
+        { name: 'Fajr', time: adhan.data.timings.Fajr },
+        { name: 'Zuhr', time: adhan.data.timings.Dhuhr },
+        { name: 'Asr', time: adhan.data.timings.Asr },
+        { name: 'Maghrib', time: adhan.data.timings.Maghrib },
+        { name: 'Isha', time: adhan.data.timings.Isha }
+    ]
+    const now = new Date()
+    const currentMinutes = now.getHours() * 60 + now.getMinutes()
 
-
-
+    for (let i = 0; i < prayers.length; i++) {
+        const prayerMinutes = timeToMinutes(prayers[i].time)
+        if (prayerMinutes > currentMinutes) {
+            nextPrayerName.textContent = prayers[i].name
+            nextPrayerTime.textContent = convertTo12hr(prayers[i].time)
+            document.getElementById(`prayer-${prayers[i].name.toLowerCase()}`).classList.add('active-prayer')
+            break
+        }
+    }
+}
