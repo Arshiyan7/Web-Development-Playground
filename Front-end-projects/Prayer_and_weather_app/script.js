@@ -2,6 +2,7 @@
 const cityName = document.getElementById('city-name');
 const currentDate = document.getElementById('current-date');
 const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon')
 
 // Weather
 const temperature = document.getElementById('temperature');
@@ -22,14 +23,17 @@ const timeAsr = document.getElementById('time-asr');
 const timeMaghrib = document.getElementById('time-maghrib');
 const timeIsha = document.getElementById('time-isha');
 
-themeToggle.addEventListener('click',function(){
+themeToggle.addEventListener('click', function () {
     if (document.body.classList.contains('light')) {
         document.body.classList.remove('light')
-        themeToggle.textContent = 'Dark'
-    }
-    else{
+        themeIcon.classList.remove('fa-sun')
+        themeIcon.classList.add('fa-moon')
+        localStorage.setItem('theme', 'dark')
+    } else {
         document.body.classList.add('light')
-        themeToggle.textContent = '' //continue from here -> change sun to moon here
+        themeIcon.classList.remove('fa-moon')
+        themeIcon.classList.add('fa-sun')
+        localStorage.setItem('theme', 'light')
     }
 })
 
@@ -133,3 +137,10 @@ function setNextPrayer(adhan) {
         }
     }
 }
+const savedTheme = localStorage.getItem('theme')
+if (savedTheme === 'light') {
+    document.body.classList.add('light')
+    themeIcon.classList.remove('fa-moon')
+    themeIcon.classList.add('fa-sun')
+}
+
