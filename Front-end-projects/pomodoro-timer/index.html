@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="timer-card">
+
+            <svg width="260" height="260" viewBox="0 0 260 260">
+                <defs>
+                    <linearGradient id="arc-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="#ff6b35" />
+                        <stop offset="100%" stop-color="#8b1a00" />
+                    </linearGradient>
+                </defs>
+                <circle cx="130" cy="130" r="110" fill="none" stroke="#2a2a2a" stroke-width="14" stroke-linecap="round" />
+                <circle id="progress-arc" cx="130" cy="130" r="110" fill="none" stroke="url(#arc-gradient)"
+                    stroke-width="14" stroke-linecap="round" stroke-dasharray="691" stroke-dashoffset="0"
+                    transform="rotate(-90 130 130)" />
+            </svg>
+
+            <div class="timer-display">
+                <span class="emoji">🍅</span>
+                <h3 id="time-display" class="time-display">25:00</h3>
+                <p class="text-display">FOCUS</p>
+                <button id="start-pause-btn">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+            </div>
+
+            <button id="mode-btn">Pomodoro</button>
+
+        </div>
+    </div>
+</body>
+
+</html>

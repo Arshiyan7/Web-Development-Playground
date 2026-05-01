@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(13, 13, 13);
+    color: white;
+}
+
+.main-container {
+    padding: 60px;
+    background-color: rgb(3, 3, 3);
+    border: 1px solid rgb(40, 40, 40);
+    border-radius: 25px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 0 20px rgba(226, 90, 26, 0.15),
+        0 0 60px rgba(226, 90, 26, 0.08);
+}
+
+.timer-card {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.timer-display .emoji {
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.timer-display .time-display {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.timer-display .text-display {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    opacity: 0.5;
+    margin: 0;
+}
+
+#start-pause-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    margin-top: 6px;
+    padding: 0;
+    line-height: 1;
+}
+
+#start-pause-btn:hover {
+    opacity: 0.7;
+}
+
+#mode-btn {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(28, 28, 28);
+    border: 1px solid rgb(50, 50, 50);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 32px;
+    border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#mode-btn:hover {
+    background: rgb(38, 38, 38);
+}
