@@ -25,6 +25,15 @@ body {
         0 0 0 1px rgba(255, 255, 255, 0.03),
         0 0 20px rgba(226, 90, 26, 0.15),
         0 0 60px rgba(226, 90, 26, 0.08);
+    transition: 0.3s ease;
+}
+
+.main-container.break-mode {
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 0 20px rgba(59, 130, 246, 0.15),
+        0 0 60px rgba(59, 130, 246, 0.08);
+    transition: 0.3s ease;
 }
 
 .timer-card {
