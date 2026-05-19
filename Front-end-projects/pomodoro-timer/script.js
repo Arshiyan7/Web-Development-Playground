@@ -14,6 +14,7 @@ let timeLeft = TOTAL_FOCUS_TIME;
 let isRunning = false;
 let currentMode = 'focus';
 let interval = null;
+const CIRCUMFERENCE = 691;
 
 modeBtn.addEventListener('click', function () {
     if (modeBtn.textContent === 'Pomodoro') {
@@ -22,8 +23,15 @@ modeBtn.addEventListener('click', function () {
         document.querySelector('#arc-gradient stop:first-child').setAttribute('stop-color', '#60a5fa');
         document.querySelector('#arc-gradient stop:last-child').setAttribute('stop-color', '#1e3a8a');
         emoji.textContent = '🧘'
-        timeDisplay.textContent = '05:00'
         modeLabel.textContent = 'BREAK'
+        clearInterval(interval)
+        isRunning = false
+        currentMode = 'break'
+        timeLeft = TOTAL_BREAK_TIME
+        updateDisplay()
+        updateArc()
+        startPauseBtn.querySelector('i').classList.remove('fa-pause')
+        startPauseBtn.querySelector('i').classList.add('fa-play')
     }
     else {
         modeBtn.textContent = 'Pomodoro';
@@ -31,8 +39,15 @@ modeBtn.addEventListener('click', function () {
         document.querySelector('#arc-gradient stop:first-child').setAttribute('stop-color', '#ff6b35');
         document.querySelector('#arc-gradient stop:last-child').setAttribute('stop-color', '#8b1a00');
         emoji.textContent = '🍅'
-        timeDisplay.textContent = '25:00'
         modeLabel.textContent = 'FOCUS'
+        clearInterval(interval)
+        isRunning = false
+        currentMode = 'focus'
+        timeLeft = TOTAL_FOCUS_TIME
+        updateDisplay()
+        updateArc()
+        startPauseBtn.querySelector('i').classList.remove('fa-pause')
+        startPauseBtn.querySelector('i').classList.add('fa-play')
     }
 })
 
@@ -45,4 +60,45 @@ startPauseBtn.addEventListener('click', function () {
         icon.classList.remove('fa-play');
         icon.classList.add('fa-pause');
     }
+
+    if (isRunning === false) {
+        interval = setInterval(tick, 1000)
+        isRunning = true
+    }
+    else {
+        clearInterval(interval)
+        isRunning = false
+    }
 })
+
+function timeCoversion(timeLeft) {
+    const minutes = Math.floor(timeLeft / 60)
+    const seconds = timeLeft % 60
+    const rem_seconds = seconds.toString().padStart(2, '0')
+    const time_bind = `${minutes}:${rem_seconds}`
+    return time_bind
+}
+// TEST
+// console.log(timeCoversion(1500))
+// console.log(timeCoversion(75))
+// console.log(timeCoversion(9))
+
+function updateArc() {
+    const totalTime = currentMode === 'focus' ? TOTAL_FOCUS_TIME : TOTAL_BREAK_TIME;
+    const offset = CIRCUMFERENCE * (1 - timeLeft / totalTime)
+    progressArc.style.strokeDashoffset = offset;
+
+}
+function updateDisplay() {
+    timeDisplay.textContent = timeCoversion(timeLeft)
+}
+function tick() {
+    timeLeft--
+    updateDisplay()
+    updateArc()
+    if (timeLeft === 0) {
+        clearInterval(interval)
+        isRunning = false
+    }
+}
+
