@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remoto.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Remoto-removebg-preview.png" alt="Remoto Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">Post a Job</a></li>
+            </ul>
+            <div class="nav-auth">
+                <button class="btn-login">Login</button>
+                <button class="btn-signup">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <div class="job-filter">
+            <input type="search" placeholder="Find your next remote gig 🌍">
+
+            <select id="location" name="location">
+                <option value="">🌎 Location</option>
+                <option value="africa">Africa</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="north-america">North America</option>
+                <option value="south-america">South America</option>
+                <option value="oceania">Oceania</option>
+                <option value="anywhere">Anywhere on Earth 🌏</option>
+            </select>
+
+            <div class="salary-filter">
+                <label for="salary">💰 Salary per year: <span id="salary-value">$50,000</span></label>
+                <input type="range" id="salary" name="salary" min="0" max="200000" step="5000" value="50000">
+            </div>
+
+            <div class="benefits-filter">
+                <p class="filter-label">✨ Perks & Benefits</p>
+                <label><input type="checkbox" value="health"> 🏥 Health Insurance</label>
+                <label><input type="checkbox" value="equity"> 📈 Stock Options</label>
+                <label><input type="checkbox" value="flexible"> ⏰ Flexible Hours</label>
+                <label><input type="checkbox" value="unlimited-pto"> 🏖️ Unlimited PTO</label>
+                <label><input type="checkbox" value="home-office"> 🖥️ Home Office Budget</label>
+                <label><input type="checkbox" value="learning"> 📚 Learning Budget</label>
+                <label><input type="checkbox" value="pension"> 🏦 Pension Plan</label>
+                <label><input type="checkbox" value="gym"> 💪 Gym Membership</label>
+                <label><input type="checkbox" value="mental-health"> 🧠 Mental Health Support</label>
+                <label><input type="checkbox" value="visa"> ✈️ Visa Sponsorship</label>
+            </div>
+
+            <div class="categories">
+                <p class="filter-label">🗂️ Categories</p>
+                <span class="tag">💻 Frontend</span>
+                <span class="tag">⚙️ Backend</span>
+                <span class="tag">📊 Data & Analytics</span>
+                <span class="tag">🎨 Design</span>
+                <span class="tag">📱 Mobile</span>
+                <span class="tag">☁️ DevOps</span>
+                <span class="tag">🤖 AI & ML</span>
+                <span class="tag">🔐 Cybersecurity</span>
+            </div>
+
+            <div class="filter-actions">
+                <button class="btn-clear">Clear all Filters</button>
+                <select id="sort-by" name="sort-by">
+                    <option value="">🔃 Sort By</option>
+                    <option value="newest">🆕 Newest First</option>
+                    <option value="salary-high">💸 Highest Salary</option>
+                    <option value="salary-low">🪙 Lowest Salary</option>
+                    <option value="popular">🔥 Most Popular</option>
+                    <option value="relevant">🎯 Most Relevant</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="jobs-list">
+
+            <!-- Job 1 -->
+            <div class="job-card" id="job-1">
+                <div class="job-summary">
+                    <h2 class="job-title">Data Analyst</h2>
+                    <p class="job-company">Diptyque Paris</p>
+                    <div class="job-tags">
+                        <span>🌍 Worldwide</span>
+                        <span>💰 $50k/year</span>
+                        <span>📄 Contract</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Finance</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Diptyque Paris is hiring a Remote Data Analyst</h2>
+                    <p><strong>Job title:</strong> Data Analyst</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <h3>About Us</h3>
+                    <p>At Diptyque Paris, we believe that behind every number and dataset lies a story — one that can inspire smarter decisions and drive meaningful change. We're passionate about turning complex data into clear insights that help our team and clients succeed.</p>
+                    <h3>The Role</h3>
+                    <p>We're looking for someone who loves digging into data, uncovering patterns, and translating numbers into stories that everyone can understand. As a Data Analyst, you'll be a vital part of our team, helping us make informed decisions that shape our future.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Dive into our data to find trends, opportunities, and areas for improvement</li>
+                        <li>Collaborate with different teams to understand their needs and provide relevant insights</li>
+                        <li>Ensure data quality and integrity through careful analysis and validation</li>
+                        <li>Develop reports and dashboards that make complex information easy to grasp</li>
+                        <li>Present findings in a way that's engaging and accessible to all levels of the organization</li>
+                        <li>Continuously look for ways to improve our data collection and analysis processes</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>2+ years of experience in data analysis or a related field</li>
+                        <li>Strong proficiency in SQL and Python or R for data manipulation</li>
+                        <li>Experience with BI tools like Power BI, Tableau, or Looker</li>
+                        <li>Excellent communication skills — you can explain data to non-technical stakeholders</li>
+                        <li>A curious mind with a genuine passion for problem-solving</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Fully remote with flexible working hours across time zones</li>
+                        <li>Competitive salary with annual performance reviews</li>
+                        <li>Learning budget of $1,000/year for courses and conferences</li>
+                        <li>Supportive team culture that values your ideas and growth</li>
+                        <li>Work on real business problems that directly impact company strategy</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$50,000/year + stock options + annual bonus</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-card" id="job-2">
+                <div class="job-summary">
+                    <h2 class="job-title">Frontend Developer</h2>
+                    <p class="job-company">Stripe</p>
+                    <div class="job-tags">
+                        <span>🌍 North America</span>
+                        <span>💰 $90k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Stripe is hiring a Remote Frontend Developer</h2>
+                    <p><strong>Job title:</strong> Frontend Developer</p>
+                    <p><strong>Location:</strong> Remote — North America</p>
+                    <h3>About Us</h3>
+                    <p>Stripe builds financial infrastructure for the internet. Millions of companies — from startups to Fortune 500s — use Stripe to accept payments, send payouts, and manage their businesses online.</p>
+                    <h3>The Role</h3>
+                    <p>We're looking for a skilled Frontend Developer to build beautiful, performant, and accessible user interfaces that millions of people interact with every day.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Build and maintain high-quality React components used across Stripe's dashboard</li>
+                        <li>Collaborate with designers to implement pixel-perfect UI from Figma designs</li>
+                        <li>Write clean, testable code with thorough documentation</li>
+                        <li>Optimize applications for maximum speed and scalability</li>
+                        <li>Participate in code reviews and contribute to frontend architecture decisions</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>3+ years of experience building production React applications</li>
+                        <li>Deep understanding of HTML, CSS, and modern JavaScript (ES6+)</li>
+                        <li>Experience with TypeScript and testing frameworks like Jest</li>
+                        <li>Strong eye for design and attention to detail</li>
+                        <li>Passion for web performance and accessibility standards</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work on products used by millions of businesses worldwide</li>
+                        <li>Competitive salary with generous equity package</li>
+                        <li>Full remote flexibility with home office stipend</li>
+                        <li>World-class health insurance and wellness benefits</li>
+                        <li>Annual company retreats and team offsites</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$90,000/year + equity + annual bonus</p>
+                    <p><strong>Location:</strong> Remote — North America</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="job-card" id="job-3">
+                <div class="job-summary">
+                    <h2 class="job-title">Backend Engineer</h2>
+                    <p class="job-company">Notion</p>
+                    <div class="job-tags">
+                        <span>🌍 Europe</span>
+                        <span>💰 $80k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Backend</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Notion is hiring a Remote Backend Engineer</h2>
+                    <p><strong>Job title:</strong> Backend Engineer</p>
+                    <p><strong>Location:</strong> Remote — Europe</p>
+                    <h3>About Us</h3>
+                    <p>Notion is the connected workspace where better, faster work happens. We're building the operating system for the modern knowledge worker — used by over 30 million people worldwide.</p>
+                    <h3>The Role</h3>
+                    <p>As a Backend Engineer at Notion, you'll work on systems that power real-time collaboration, data sync, and the core infrastructure that keeps Notion fast and reliable at scale.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Design and build scalable backend services using Node.js and PostgreSQL</li>
+                        <li>Work on real-time data sync and collaboration features</li>
+                        <li>Improve system reliability, performance, and observability</li>
+                        <li>Collaborate cross-functionally with product and design teams</li>
+                        <li>Mentor junior engineers and contribute to engineering culture</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>4+ years of backend engineering experience</li>
+                        <li>Strong knowledge of Node.js, PostgreSQL, and RESTful API design</li>
+                        <li>Experience with distributed systems and microservices architecture</li>
+                        <li>Ability to debug complex production issues under pressure</li>
+                        <li>Strong written communication skills for async remote work</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work on a product that genuinely changes how people work</li>
+                        <li>Async-first culture that respects your time and focus</li>
+                        <li>Generous equity with meaningful upside potential</li>
+                        <li>$2,000 annual learning and development budget</li>
+                        <li>Flexible PTO with a minimum encouraged vacation policy</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$80,000/year + equity + health benefits</p>
+                    <p><strong>Location:</strong> Remote — Europe</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="job-card" id="job-4">
+                <div class="job-summary">
+                    <h2 class="job-title">UI/UX Designer</h2>
+                    <p class="job-company">Linear</p>
+                    <div class="job-tags">
+                        <span>🌍 Worldwide</span>
+                        <span>💰 $75k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Design</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Linear is hiring a Remote UI/UX Designer</h2>
+                    <p><strong>Job title:</strong> UI/UX Designer</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <h3>About Us</h3>
+                    <p>Linear is the tool for high-performance teams to plan and build great products. We obsess over craft and design — and we're looking for someone who shares that obsession.</p>
+                    <h3>The Role</h3>
+                    <p>You'll shape the visual and interaction design of Linear — working closely with engineers and product managers to create experiences that feel effortless and delightful.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Design end-to-end product features from concept to final polish</li>
+                        <li>Create and maintain a scalable design system in Figma</li>
+                        <li>Conduct user research and usability testing to validate design decisions</li>
+                        <li>Collaborate closely with engineers to ensure pixel-perfect implementation</li>
+                        <li>Contribute to Linear's overall visual identity and brand direction</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>3+ years of product design experience at a SaaS company</li>
+                        <li>Expert-level Figma skills and a strong design portfolio</li>
+                        <li>Deep understanding of interaction design and user psychology</li>
+                        <li>Ability to communicate design rationale clearly to engineers and stakeholders</li>
+                        <li>High standards for craft and attention to the smallest details</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work on a product loved by thousands of engineering teams</li>
+                        <li>Small team where your work has immediate and visible impact</li>
+                        <li>Full remote with flexible hours — work when you do your best thinking</li>
+                        <li>Competitive salary with equity from an early stage</li>
+                        <li>Top-tier equipment budget to set up your ideal workspace</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$75,000/year + equity + equipment budget</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="job-card" id="job-5">
+                <div class="job-summary">
+                    <h2 class="job-title">Machine Learning Engineer</h2>
+                    <p class="job-company">Hugging Face</p>
+                    <div class="job-tags">
+                        <span>🌍 Worldwide</span>
+                        <span>💰 $120k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">AI & ML</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Hugging Face is hiring a Remote ML Engineer</h2>
+                    <p><strong>Job title:</strong> Machine Learning Engineer</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <h3>About Us</h3>
+                    <p>Hugging Face is the AI community building the future of machine learning. We're the home of Transformers, Datasets, and Spaces — tools used by over 1 million researchers and engineers worldwide.</p>
+                    <h3>The Role</h3>
+                    <p>You'll work on the core ML infrastructure that powers the Hugging Face ecosystem — building, training, and deploying models at scale while contributing to open source.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Train and fine-tune large language models for various downstream tasks</li>
+                        <li>Build and maintain ML pipelines for model evaluation and deployment</li>
+                        <li>Contribute to open source libraries used by the global AI community</li>
+                        <li>Collaborate with researchers to implement cutting-edge paper results</li>
+                        <li>Optimize model inference for speed and efficiency at scale</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>Strong Python skills with deep experience in PyTorch or JAX</li>
+                        <li>Solid understanding of transformer architectures and NLP fundamentals</li>
+                        <li>Experience training models on distributed GPU clusters</li>
+                        <li>Open source contribution history is a strong plus</li>
+                        <li>Ability to read and implement machine learning research papers</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work at the frontier of open source AI development</li>
+                        <li>Collaborate with some of the brightest minds in machine learning</li>
+                        <li>Fully distributed team across 30+ countries</li>
+                        <li>Generous equity in a fast-growing company</li>
+                        <li>Conference budget and support for publishing research</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$120,000/year + equity + conference budget</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 6 -->
+            <div class="job-card" id="job-6">
+                <div class="job-summary">
+                    <h2 class="job-title">DevOps Engineer</h2>
+                    <p class="job-company">GitLab</p>
+                    <div class="job-tags">
+                        <span>🌍 Europe</span>
+                        <span>💰 $95k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">DevOps</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">GitLab is hiring a Remote DevOps Engineer</h2>
+                    <p><strong>Job title:</strong> DevOps Engineer</p>
+                    <p><strong>Location:</strong> Remote — Europe</p>
+                    <h3>About Us</h3>
+                    <p>GitLab is the most comprehensive AI-powered DevSecOps platform. We enable organizations to deliver software faster and more securely, with a fully remote team across 65+ countries.</p>
+                    <h3>The Role</h3>
+                    <p>You'll build and maintain the infrastructure that keeps GitLab running at massive scale — working on CI/CD pipelines, cloud infrastructure, and reliability engineering.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Design and maintain cloud infrastructure on AWS and GCP using Terraform</li>
+                        <li>Build and improve CI/CD pipelines for faster and safer deployments</li>
+                        <li>Monitor system health and lead incident response and post-mortems</li>
+                        <li>Automate repetitive operational tasks to improve team efficiency</li>
+                        <li>Champion security and compliance best practices across infrastructure</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>3+ years of DevOps or Site Reliability Engineering experience</li>
+                        <li>Strong knowledge of AWS or GCP and infrastructure as code tools</li>
+                        <li>Experience with Kubernetes, Docker, and container orchestration</li>
+                        <li>Solid scripting skills in Bash or Python for automation</li>
+                        <li>Experience with monitoring tools like Prometheus, Grafana, or Datadog</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work for one of the largest all-remote companies in the world</li>
+                        <li>Transparent culture with public handbook and open decision making</li>
+                        <li>Generous PTO with a minimum vacation policy</li>
+                        <li>Home office budget and co-working space reimbursement</li>
+                        <li>Stock options with a clear and fair vesting schedule</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$95,000/year + stock options + home office budget</p>
+                    <p><strong>Location:</strong> Remote — Europe</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 7 -->
+            <div class="job-card" id="job-7">
+                <div class="job-summary">
+                    <h2 class="job-title">iOS Developer</h2>
+                    <p class="job-company">Duolingo</p>
+                    <div class="job-tags">
+                        <span>🌍 North America</span>
+                        <span>💰 $100k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Mobile</span>
+                        <span class="tag">Swift</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Duolingo is hiring a Remote iOS Developer</h2>
+                    <p><strong>Job title:</strong> iOS Developer</p>
+                    <p><strong>Location:</strong> Remote — North America</p>
+                    <h3>About Us</h3>
+                    <p>Duolingo is the world's most popular language learning app with over 500 million users. Our mission is to develop the best education in the world and make it universally available.</p>
+                    <h3>The Role</h3>
+                    <p>You'll build delightful iOS experiences that help millions of people learn languages every day — working on features that are fun, engaging, and pedagogically sound.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Build and ship new iOS features used by hundreds of millions of learners</li>
+                        <li>Collaborate with product managers and designers on feature development</li>
+                        <li>Write clean, maintainable Swift code with comprehensive test coverage</li>
+                        <li>Optimize app performance and reduce load times across device types</li>
+                        <li>Participate in A/B experiments to improve learning outcomes</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>3+ years of iOS development experience with Swift</li>
+                        <li>Deep understanding of UIKit and SwiftUI frameworks</li>
+                        <li>Experience with RESTful APIs and local data persistence</li>
+                        <li>Strong understanding of mobile performance optimization</li>
+                        <li>Passion for education and making learning accessible to everyone</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work on an app that genuinely improves people's lives globally</li>
+                        <li>Mission-driven culture that values impact over output</li>
+                        <li>Competitive salary with equity and performance bonuses</li>
+                        <li>Generous parental leave and family-friendly policies</li>
+                        <li>Annual learning stipend and internal mobility opportunities</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$100,000/year + equity + annual bonus</p>
+                    <p><strong>Location:</strong> Remote — North America</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 8 -->
+            <div class="job-card" id="job-8">
+                <div class="job-summary">
+                    <h2 class="job-title">Cybersecurity Analyst</h2>
+                    <p class="job-company">Cloudflare</p>
+                    <div class="job-tags">
+                        <span>🌍 Worldwide</span>
+                        <span>💰 $85k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Cybersecurity</span>
+                        <span class="tag">Networking</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Cloudflare is hiring a Remote Cybersecurity Analyst</h2>
+                    <p><strong>Job title:</strong> Cybersecurity Analyst</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <h3>About Us</h3>
+                    <p>Cloudflare is on a mission to help build a better internet. We protect and accelerate millions of websites and APIs — keeping them fast, secure, and reliable at global scale.</p>
+                    <h3>The Role</h3>
+                    <p>You'll be on the front lines of internet security — monitoring threats, investigating incidents, and building systems that protect millions of users from cyberattacks every day.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Monitor and analyze security events across Cloudflare's global network</li>
+                        <li>Investigate and respond to security incidents and potential breaches</li>
+                        <li>Build detection rules and automated response playbooks</li>
+                        <li>Conduct threat hunting using SIEM and threat intelligence tools</li>
+                        <li>Produce clear incident reports and recommend remediation steps</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>3+ years of experience in cybersecurity or SOC analysis</li>
+                        <li>Strong understanding of networking protocols, firewalls, and intrusion detection</li>
+                        <li>Experience with SIEM platforms like Splunk or Elastic</li>
+                        <li>Familiarity with MITRE ATT&CK framework and threat modeling</li>
+                        <li>Relevant certifications like CISSP, CEH, or CompTIA Security+ preferred</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work on security infrastructure that protects a significant portion of the internet</li>
+                        <li>Cutting-edge tools and technology for threat detection and response</li>
+                        <li>Remote-first culture with flexible working hours</li>
+                        <li>Comprehensive health benefits and mental health support</li>
+                        <li>Clear career progression paths into senior and lead roles</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$85,000/year + equity + health benefits</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 9 -->
+            <div class="job-card" id="job-9">
+                <div class="job-summary">
+                    <h2 class="job-title">Product Manager</h2>
+                    <p class="job-company">Figma</p>
+                    <div class="job-tags">
+                        <span>🌍 North America</span>
+                        <span>💰 $110k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Product</span>
+                        <span class="tag">SaaS</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Figma is hiring a Remote Product Manager</h2>
+                    <p><strong>Job title:</strong> Product Manager</p>
+                    <p><strong>Location:</strong> Remote — North America</p>
+                    <h3>About Us</h3>
+                    <p>Figma is the collaborative design platform used by over 4 million designers, engineers, and product managers worldwide. We're making design accessible to everyone — not just designers.</p>
+                    <h3>The Role</h3>
+                    <p>You'll own the roadmap for a core product area — driving strategy, working cross-functionally, and shipping features that millions of teams rely on every day.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Define product vision and roadmap for your assigned product area</li>
+                        <li>Work closely with design, engineering, and data teams to ship features</li>
+                        <li>Conduct user interviews and analyze usage data to inform decisions</li>
+                        <li>Write clear and detailed product specs and user stories</li>
+                        <li>Measure the impact of shipped features and iterate based on results</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>4+ years of product management experience at a B2B SaaS company</li>
+                        <li>Strong analytical skills — comfortable with data and SQL basics</li>
+                        <li>Experience working closely with design and engineering in an agile environment</li>
+                        <li>Excellent written and verbal communication skills</li>
+                        <li>Deep empathy for users and a customer-first mindset</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Work on a product category-defining tool used globally</li>
+                        <li>High ownership culture where PMs have real decision-making power</li>
+                        <li>Competitive compensation with meaningful equity</li>
+                        <li>Generous parental leave and wellness benefits</li>
+                        <li>Regular team offsites and a strong in-person culture despite being remote</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$110,000/year + equity + wellness stipend</p>
+                    <p><strong>Location:</strong> Remote — North America</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+            <!-- Job 10 -->
+            <div class="job-card" id="job-10">
+                <div class="job-summary">
+                    <h2 class="job-title">Junior Data Analyst</h2>
+                    <p class="job-company">Shopify</p>
+                    <div class="job-tags">
+                        <span>🌍 Worldwide</span>
+                        <span>💰 $55k/year</span>
+                        <span>📄 Full Time</span>
+                    </div>
+                    <div class="job-categories">
+                        <span class="tag">Analytics</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                </div>
+                <div class="job-details hidden">
+                    <h2 class="job-details-title">Shopify is hiring a Remote Junior Data Analyst</h2>
+                    <p><strong>Job title:</strong> Junior Data Analyst</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <h3>About Us</h3>
+                    <p>Shopify powers over 1.7 million businesses in 175 countries. We make commerce better for everyone — from first-time entrepreneurs to enterprise brands — and data is at the heart of everything we do.</p>
+                    <h3>The Role</h3>
+                    <p>As a Junior Data Analyst at Shopify, you'll support data-driven decision making across product and business teams — learning fast and growing into a senior role within 18 months.</p>
+                    <h3>What You'll Do</h3>
+                    <ul>
+                        <li>Write SQL queries to extract and analyze data from large datasets</li>
+                        <li>Build dashboards and reports in Looker to track key business metrics</li>
+                        <li>Support senior analysts on deep-dive investigations and strategic projects</li>
+                        <li>Present data insights clearly to non-technical stakeholders</li>
+                        <li>Identify data quality issues and work with engineering to resolve them</li>
+                    </ul>
+                    <h3>What We're Looking For</h3>
+                    <ul>
+                        <li>1+ year of experience in data analysis or a related field</li>
+                        <li>Solid SQL skills — you're comfortable with joins, CTEs, and window functions</li>
+                        <li>Experience with Python or R for data manipulation is a plus</li>
+                        <li>Strong attention to detail and a love for clean, accurate data</li>
+                        <li>Eagerness to learn fast and take on increasing responsibility</li>
+                    </ul>
+                    <h3>Why Join Us</h3>
+                    <ul>
+                        <li>Clear growth path from junior to senior analyst within 18 months</li>
+                        <li>Work with massive datasets that reflect real global commerce trends</li>
+                        <li>Remote-first culture with async communication norms</li>
+                        <li>$1,500 annual learning and development budget</li>
+                        <li>Equity participation from day one with a transparent vesting schedule</li>
+                    </ul>
+                    <h2>Salary and Compensation</h2>
+                    <p>$55,000/year + equity + learning budget</p>
+                    <p><strong>Location:</strong> Remote — Worldwide</p>
+                    <button class="btn-apply">Apply for this Job 🚀</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-heading">Good jobs don't wait. Neither should you ⚡</p>
+        <input type="email" placeholder="your@email.com — we won't spam, promise 🤞">
+        <button class="footer-btn">Count Me In 🤝</button>
+    </footer>
+
+</body>
+
+</html>

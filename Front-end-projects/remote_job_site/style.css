@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+.navbar .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-container .nav-logo img {
+    width: 150px;
+}
+
+.navbar .nav-container .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.navbar .nav-container .nav-links li a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.navbar .nav-container .nav-auth {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-container .nav-auth button {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 30px;
+}
+footer input{
+    width: 350px;
+    padding: 3px 8px;
+    border: 1px solid #ddd;
+}
+footer button{
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+}
