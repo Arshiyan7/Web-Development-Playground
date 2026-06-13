@@ -14,6 +14,11 @@
             <div class="nav-logo">
                 <img src="Remoto-removebg-preview.png" alt="Remoto Logo">
             </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#">Jobs</a></li>
                 <li><a href="#">Companies</a></li>
@@ -46,19 +51,17 @@
                 <label for="salary">💰 Salary per year: <span id="salary-value">$50,000</span></label>
                 <input type="range" id="salary" name="salary" min="0" max="200000" step="5000" value="50000">
             </div>
-
-            <div class="benefits-filter">
-                <p class="filter-label">✨ Perks & Benefits</p>
-                <label><input type="checkbox" value="health"> 🏥 Health Insurance</label>
-                <label><input type="checkbox" value="equity"> 📈 Stock Options</label>
-                <label><input type="checkbox" value="flexible"> ⏰ Flexible Hours</label>
-                <label><input type="checkbox" value="unlimited-pto"> 🏖️ Unlimited PTO</label>
-                <label><input type="checkbox" value="home-office"> 🖥️ Home Office Budget</label>
-                <label><input type="checkbox" value="learning"> 📚 Learning Budget</label>
-                <label><input type="checkbox" value="pension"> 🏦 Pension Plan</label>
-                <label><input type="checkbox" value="gym"> 💪 Gym Membership</label>
-                <label><input type="checkbox" value="mental-health"> 🧠 Mental Health Support</label>
-                <label><input type="checkbox" value="visa"> ✈️ Visa Sponsorship</label>
+            <select id="sort-by" name="sort-by">
+                <option value="">🔃 Sort By</option>
+                <option value="newest">🆕 Newest First</option>
+                <option value="salary-high">💸 Highest Salary</option>
+                <option value="salary-low">🪙 Lowest Salary</option>
+                <option value="popular">🔥 Most Popular</option>
+                <option value="relevant">🎯 Most Relevant</option>
+            </select>
+            <div class="filter-actions">
+                <button class="btn-clear">Clear all Filters</button>
+                <button class="btn-apply-filter">Apply all</button>
             </div>
 
             <div class="categories">
@@ -73,16 +76,18 @@
                 <span class="tag">🔐 Cybersecurity</span>
             </div>
 
-            <div class="filter-actions">
-                <button class="btn-clear">Clear all Filters</button>
-                <select id="sort-by" name="sort-by">
-                    <option value="">🔃 Sort By</option>
-                    <option value="newest">🆕 Newest First</option>
-                    <option value="salary-high">💸 Highest Salary</option>
-                    <option value="salary-low">🪙 Lowest Salary</option>
-                    <option value="popular">🔥 Most Popular</option>
-                    <option value="relevant">🎯 Most Relevant</option>
-                </select>
+            <div class="benefits-filter">
+                <p class="filter-label">✨ Perks & Benefits</p>
+                <label><input type="checkbox" value="health"> 🏥 Health Insurance</label>
+                <label><input type="checkbox" value="equity"> 📈 Stock Options</label>
+                <label><input type="checkbox" value="flexible"> ⏰ Flexible Hours</label>
+                <label><input type="checkbox" value="unlimited-pto"> 🏖️ Unlimited PTO</label>
+                <label><input type="checkbox" value="home-office"> 🖥️ Home Office Budget</label>
+                <label><input type="checkbox" value="learning"> 📚 Learning Budget</label>
+                <label><input type="checkbox" value="pension"> 🏦 Pension Plan</label>
+                <label><input type="checkbox" value="gym"> 💪 Gym Membership</label>
+                <label><input type="checkbox" value="mental-health"> 🧠 Mental Health Support</label>
+                <label><input type="checkbox" value="visa"> ✈️ Visa Sponsorship</label>
             </div>
         </div>
 
@@ -109,16 +114,22 @@
                     <p><strong>Job title:</strong> Data Analyst</p>
                     <p><strong>Location:</strong> Remote — Worldwide</p>
                     <h3>About Us</h3>
-                    <p>At Diptyque Paris, we believe that behind every number and dataset lies a story — one that can inspire smarter decisions and drive meaningful change. We're passionate about turning complex data into clear insights that help our team and clients succeed.</p>
+                    <p>At Diptyque Paris, we believe that behind every number and dataset lies a story — one that can
+                        inspire smarter decisions and drive meaningful change. We're passionate about turning complex
+                        data into clear insights that help our team and clients succeed.</p>
                     <h3>The Role</h3>
-                    <p>We're looking for someone who loves digging into data, uncovering patterns, and translating numbers into stories that everyone can understand. As a Data Analyst, you'll be a vital part of our team, helping us make informed decisions that shape our future.</p>
+                    <p>We're looking for someone who loves digging into data, uncovering patterns, and translating
+                        numbers into stories that everyone can understand. As a Data Analyst, you'll be a vital part of
+                        our team, helping us make informed decisions that shape our future.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Dive into our data to find trends, opportunities, and areas for improvement</li>
-                        <li>Collaborate with different teams to understand their needs and provide relevant insights</li>
+                        <li>Collaborate with different teams to understand their needs and provide relevant insights
+                        </li>
                         <li>Ensure data quality and integrity through careful analysis and validation</li>
                         <li>Develop reports and dashboards that make complex information easy to grasp</li>
-                        <li>Present findings in a way that's engaging and accessible to all levels of the organization</li>
+                        <li>Present findings in a way that's engaging and accessible to all levels of the organization
+                        </li>
                         <li>Continuously look for ways to improve our data collection and analysis processes</li>
                     </ul>
                     <h3>What We're Looking For</h3>
@@ -165,9 +176,12 @@
                     <p><strong>Job title:</strong> Frontend Developer</p>
                     <p><strong>Location:</strong> Remote — North America</p>
                     <h3>About Us</h3>
-                    <p>Stripe builds financial infrastructure for the internet. Millions of companies — from startups to Fortune 500s — use Stripe to accept payments, send payouts, and manage their businesses online.</p>
+                    <p>Stripe builds financial infrastructure for the internet. Millions of companies — from startups to
+                        Fortune 500s — use Stripe to accept payments, send payouts, and manage their businesses online.
+                    </p>
                     <h3>The Role</h3>
-                    <p>We're looking for a skilled Frontend Developer to build beautiful, performant, and accessible user interfaces that millions of people interact with every day.</p>
+                    <p>We're looking for a skilled Frontend Developer to build beautiful, performant, and accessible
+                        user interfaces that millions of people interact with every day.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Build and maintain high-quality React components used across Stripe's dashboard</li>
@@ -220,9 +234,11 @@
                     <p><strong>Job title:</strong> Backend Engineer</p>
                     <p><strong>Location:</strong> Remote — Europe</p>
                     <h3>About Us</h3>
-                    <p>Notion is the connected workspace where better, faster work happens. We're building the operating system for the modern knowledge worker — used by over 30 million people worldwide.</p>
+                    <p>Notion is the connected workspace where better, faster work happens. We're building the operating
+                        system for the modern knowledge worker — used by over 30 million people worldwide.</p>
                     <h3>The Role</h3>
-                    <p>As a Backend Engineer at Notion, you'll work on systems that power real-time collaboration, data sync, and the core infrastructure that keeps Notion fast and reliable at scale.</p>
+                    <p>As a Backend Engineer at Notion, you'll work on systems that power real-time collaboration, data
+                        sync, and the core infrastructure that keeps Notion fast and reliable at scale.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Design and build scalable backend services using Node.js and PostgreSQL</li>
@@ -275,9 +291,11 @@
                     <p><strong>Job title:</strong> UI/UX Designer</p>
                     <p><strong>Location:</strong> Remote — Worldwide</p>
                     <h3>About Us</h3>
-                    <p>Linear is the tool for high-performance teams to plan and build great products. We obsess over craft and design — and we're looking for someone who shares that obsession.</p>
+                    <p>Linear is the tool for high-performance teams to plan and build great products. We obsess over
+                        craft and design — and we're looking for someone who shares that obsession.</p>
                     <h3>The Role</h3>
-                    <p>You'll shape the visual and interaction design of Linear — working closely with engineers and product managers to create experiences that feel effortless and delightful.</p>
+                    <p>You'll shape the visual and interaction design of Linear — working closely with engineers and
+                        product managers to create experiences that feel effortless and delightful.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Design end-to-end product features from concept to final polish</li>
@@ -330,9 +348,12 @@
                     <p><strong>Job title:</strong> Machine Learning Engineer</p>
                     <p><strong>Location:</strong> Remote — Worldwide</p>
                     <h3>About Us</h3>
-                    <p>Hugging Face is the AI community building the future of machine learning. We're the home of Transformers, Datasets, and Spaces — tools used by over 1 million researchers and engineers worldwide.</p>
+                    <p>Hugging Face is the AI community building the future of machine learning. We're the home of
+                        Transformers, Datasets, and Spaces — tools used by over 1 million researchers and engineers
+                        worldwide.</p>
                     <h3>The Role</h3>
-                    <p>You'll work on the core ML infrastructure that powers the Hugging Face ecosystem — building, training, and deploying models at scale while contributing to open source.</p>
+                    <p>You'll work on the core ML infrastructure that powers the Hugging Face ecosystem — building,
+                        training, and deploying models at scale while contributing to open source.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Train and fine-tune large language models for various downstream tasks</li>
@@ -385,9 +406,11 @@
                     <p><strong>Job title:</strong> DevOps Engineer</p>
                     <p><strong>Location:</strong> Remote — Europe</p>
                     <h3>About Us</h3>
-                    <p>GitLab is the most comprehensive AI-powered DevSecOps platform. We enable organizations to deliver software faster and more securely, with a fully remote team across 65+ countries.</p>
+                    <p>GitLab is the most comprehensive AI-powered DevSecOps platform. We enable organizations to
+                        deliver software faster and more securely, with a fully remote team across 65+ countries.</p>
                     <h3>The Role</h3>
-                    <p>You'll build and maintain the infrastructure that keeps GitLab running at massive scale — working on CI/CD pipelines, cloud infrastructure, and reliability engineering.</p>
+                    <p>You'll build and maintain the infrastructure that keeps GitLab running at massive scale — working
+                        on CI/CD pipelines, cloud infrastructure, and reliability engineering.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Design and maintain cloud infrastructure on AWS and GCP using Terraform</li>
@@ -440,9 +463,11 @@
                     <p><strong>Job title:</strong> iOS Developer</p>
                     <p><strong>Location:</strong> Remote — North America</p>
                     <h3>About Us</h3>
-                    <p>Duolingo is the world's most popular language learning app with over 500 million users. Our mission is to develop the best education in the world and make it universally available.</p>
+                    <p>Duolingo is the world's most popular language learning app with over 500 million users. Our
+                        mission is to develop the best education in the world and make it universally available.</p>
                     <h3>The Role</h3>
-                    <p>You'll build delightful iOS experiences that help millions of people learn languages every day — working on features that are fun, engaging, and pedagogically sound.</p>
+                    <p>You'll build delightful iOS experiences that help millions of people learn languages every day —
+                        working on features that are fun, engaging, and pedagogically sound.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Build and ship new iOS features used by hundreds of millions of learners</li>
@@ -495,9 +520,11 @@
                     <p><strong>Job title:</strong> Cybersecurity Analyst</p>
                     <p><strong>Location:</strong> Remote — Worldwide</p>
                     <h3>About Us</h3>
-                    <p>Cloudflare is on a mission to help build a better internet. We protect and accelerate millions of websites and APIs — keeping them fast, secure, and reliable at global scale.</p>
+                    <p>Cloudflare is on a mission to help build a better internet. We protect and accelerate millions of
+                        websites and APIs — keeping them fast, secure, and reliable at global scale.</p>
                     <h3>The Role</h3>
-                    <p>You'll be on the front lines of internet security — monitoring threats, investigating incidents, and building systems that protect millions of users from cyberattacks every day.</p>
+                    <p>You'll be on the front lines of internet security — monitoring threats, investigating incidents,
+                        and building systems that protect millions of users from cyberattacks every day.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Monitor and analyze security events across Cloudflare's global network</li>
@@ -550,9 +577,11 @@
                     <p><strong>Job title:</strong> Product Manager</p>
                     <p><strong>Location:</strong> Remote — North America</p>
                     <h3>About Us</h3>
-                    <p>Figma is the collaborative design platform used by over 4 million designers, engineers, and product managers worldwide. We're making design accessible to everyone — not just designers.</p>
+                    <p>Figma is the collaborative design platform used by over 4 million designers, engineers, and
+                        product managers worldwide. We're making design accessible to everyone — not just designers.</p>
                     <h3>The Role</h3>
-                    <p>You'll own the roadmap for a core product area — driving strategy, working cross-functionally, and shipping features that millions of teams rely on every day.</p>
+                    <p>You'll own the roadmap for a core product area — driving strategy, working cross-functionally,
+                        and shipping features that millions of teams rely on every day.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Define product vision and roadmap for your assigned product area</li>
@@ -605,9 +634,12 @@
                     <p><strong>Job title:</strong> Junior Data Analyst</p>
                     <p><strong>Location:</strong> Remote — Worldwide</p>
                     <h3>About Us</h3>
-                    <p>Shopify powers over 1.7 million businesses in 175 countries. We make commerce better for everyone — from first-time entrepreneurs to enterprise brands — and data is at the heart of everything we do.</p>
+                    <p>Shopify powers over 1.7 million businesses in 175 countries. We make commerce better for everyone
+                        — from first-time entrepreneurs to enterprise brands — and data is at the heart of everything we
+                        do.</p>
                     <h3>The Role</h3>
-                    <p>As a Junior Data Analyst at Shopify, you'll support data-driven decision making across product and business teams — learning fast and growing into a senior role within 18 months.</p>
+                    <p>As a Junior Data Analyst at Shopify, you'll support data-driven decision making across product
+                        and business teams — learning fast and growing into a senior role within 18 months.</p>
                     <h3>What You'll Do</h3>
                     <ul>
                         <li>Write SQL queries to extract and analyze data from large datasets</li>
@@ -644,10 +676,12 @@
 
     <footer>
         <p class="footer-heading">Good jobs don't wait. Neither should you ⚡</p>
-        <input type="email" placeholder="your@email.com — we won't spam, promise 🤞">
-        <button class="footer-btn">Count Me In 🤝</button>
+        <form class="footer-form">
+            <input type="email" required placeholder="your@email.com — we won't spam, promise 🤞">
+            <button class="footer-btn" type="submit">Count Me In 🤝</button>
+        </form>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
