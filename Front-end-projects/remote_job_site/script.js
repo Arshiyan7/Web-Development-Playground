@@ -71,3 +71,51 @@ hamburger.addEventListener('click',function(){
     navAuth.classList.toggle('open')
     navLinks.classList.toggle('open')
 })
+
+btnApplyFilter.addEventListener('click', function() {
+    const ActiveCategories = []
+    tags.forEach(tag => {
+        if (tag.classList.contains('active')) {
+            ActiveCategories.push(tag.dataset.value)
+        }
+    });
+    const search_value = searchInput.value.trim()
+    const salarySlider_value = salarySlider.value
+    const location_value = locationSelect.value
+
+    jobCards.forEach(card => {
+        const matchLocation = location_value === '' || card.dataset.location === location_value
+        const matchSalary = Number(card.dataset.salary) >= Number(salarySlider_value)
+        const matchSearch = searchInput.value.trim() === '' || card.querySelector('.job-title').textContent.toLowerCase().includes(search_value.toLowerCase())
+        const matchTag = ActiveCategories.length === 0 || ActiveCategories.includes(card.dataset.category)
+
+        if (matchLocation && matchSalary && matchTag && matchSearch) {
+            card.style.display = 'block'
+        }
+        else{
+            card.style.display = 'none'
+        }
+    });
+})
+
+btnClear.addEventListener('click', function() {
+
+    searchInput.value = ''
+    locationSelect.value = ''
+    salarySlider.value = 50000
+    salaryValue.textContent = '$50,000'
+    sortBy.value = ''
+
+    tags.forEach(tag => {
+        tag.classList.remove('active')
+    })
+
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false
+    })
+
+    jobCards.forEach(card => {
+        card.style.display = 'block'
+    })
+
+})
