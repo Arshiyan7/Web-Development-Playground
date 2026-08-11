@@ -1,16 +1,47 @@
-# React + Vite
+# React Learning and Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains my React.js learning journey and practice work while following the React course by Bob Ziroll.
 
-Currently, two official plugins are available:
+The purpose of this repository is to learn React fundamentals through hands-on exercises, challenges, and progressively larger projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What I Am Practicing
 
-## React Compiler
+- React fundamentals
+- JSX
+- Components
+- Props
+- State
+- Event handling
+- Conditional rendering
+- Forms
+- `useState`
+- `useEffect`
+- Rendering lists with `.map()`
+- Passing data between components
+- Working with APIs
+- React project organization
+- Building reusable components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
 
-## Expanding the ESLint configuration
+The main React learning environment is created using Vite.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+Html-Css-Course/
+└── React/
+    └── React-concepts/
+        ├── public/
+        │
+        ├── src/
+        │   ├── assets/
+        │   ├── components/
+        │   ├── App.jsx
+        │   ├── App.css
+        │   ├── index.css
+        │   └── main.jsx
+        │
+        ├── index.html
+        ├── package.json
+        ├── package-lock.json
+        ├── vite.config.js
+        └── .gitignore
