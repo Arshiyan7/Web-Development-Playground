@@ -165,25 +165,45 @@
 // }
 
 // Using CSS
+// import { createRoot } from "react-dom/client";
+// import reactLogo from "./assets/react.svg";
+// import "./App.css";
+// import Header from "./component/header"
+// import Main from "./component/MainContent"
+// import Footer from "./component/Footer"
+// const root = createRoot(document.getElementById("root"));
+
+// root.render(<Page />);
+
+
+
+
+// function Page(){
+//     return(
+//         <>
+//         <Header/>
+//         <Main/>
+//         <Footer/>
+//         </>
+//     )
+// }
+
+// MINI Project (React facts)
 import { createRoot } from "react-dom/client";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+const root = createRoot(document.getElementById("root"));
 import Header from "./component/header"
 import Main from "./component/MainContent"
-import Footer from "./component/Footer"
-const root = createRoot(document.getElementById("root"));
+import "./App.css"
 
-root.render(<Page />);
-
-
-
+root.render(<Page/>)
 
 function Page(){
     return(
         <>
+        <div className="main-container">
         <Header/>
         <Main/>
-        <Footer/>
+        </div>
         </>
     )
 }
