@@ -35,6 +35,9 @@ Html-Css-Course/
         ├── src/
         │   ├── assets/
         │   ├── components/
+                ├── Footer.jsx
+                ├── header.jsx
+                ├── MainContent.jsx
         │   ├── App.jsx
         │   ├── App.css
         │   ├── index.css
