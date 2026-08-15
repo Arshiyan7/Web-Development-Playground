@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Optional logs, environment files, and OS junk
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.DS_Store
+Front-end-projects/help.txt

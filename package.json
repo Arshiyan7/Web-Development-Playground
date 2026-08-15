@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "html-css-course",
+  "version": "1.0.0",
+  "description": "This repository is a collection of resources, notes, and code snippets that I gather throughout my journey in web development. It will serve as a personal knowledge base as I explore both front-end and back-end technologies on my path to becoming a full-stack developer.",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arshiyan7/Web-Development-Playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arshiyan7/Web-Development-Playground/issues"
+  },
+  "homepage": "https://github.com/Arshiyan7/Web-Development-Playground#readme"
+}
