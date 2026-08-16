@@ -188,22 +188,28 @@
 //     )
 // }
 
-// MINI Project (React facts)
-import { createRoot } from "react-dom/client";
-const root = createRoot(document.getElementById("root"));
-import Header from "./component/header"
-import Main from "./component/MainContent"
-import "./App.css"
+// MINI Project 1 (React facts)
+// import { createRoot } from "react-dom/client";
+// const root = createRoot(document.getElementById("root"));
+// import Header from "./component/MiniProjectOne/header"
+// import Main from "./component/MiniProjectOne/MainContent"
+// import "./App.css"
 
-root.render(<Page/>)
+// root.render(<Page/>)
 
-function Page(){
-    return(
-        <>
-        <div className="main-container">
-        <Header/>
-        <Main/>
-        </div>
-        </>
-    )
-}
+// function Page(){
+//     return(
+//         <div className="main-container">
+//         <Header/>
+//         <Main/>
+//         </div>
+//     )
+// }
+
+// MINI PROJECT 2 (Travel Journal)
+import {createRoot} from "react-dom/client";
+import App from './App'
+import  './App.css'
+const root = createRoot(document.getElementById('root'));
+
+root.render(<App/>)

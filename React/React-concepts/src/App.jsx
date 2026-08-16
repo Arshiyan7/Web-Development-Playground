@@ -1,5 +1,11 @@
-function App() {
-  return <h1>Lets get started!</h1>
-}
+import Header from './component/MiniProjectTwo/Header'
+import About from './component/MiniProjectTwo/About'
 
-export default App
+export default function App(){
+  return(
+    <>
+    <Header/>
+    <About/>
+    </>
+  )
+}
