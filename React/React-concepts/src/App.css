@@ -49,7 +49,7 @@ body {
  */
 
 /* MINI Project 2 (Travel Journal) */
-header{
+/* header{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,7 +138,42 @@ header h1{
   font-size: 14px;
   color: rgb(66, 65, 65);
   line-height: 1.5;
+} */
+
+/* MINI PROJECT 3 (Cats Contact) */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
+.contacts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.cat-card {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.cat-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cat-card h2 {
+  font-size: 25px;
+}
+
+.cat-card p {
+  font-size: 16px;
+  color: #555;
+}
 
 
