@@ -1,8 +1,10 @@
 // Props in JSX
-export default function Practice(){
-    const firstName = 'Arshiyan'
-    const lastName = 'Mairaj'
-    return(
-        <h1>Hello, {firstName} {lastName}</h1>
-    )
+const person = {
+    img : './MiniProjectThree/photos/Happy.webp',
+    name : "Arshiyan" ,
+    email : "arshiyan@gmail.com" ,
 }
+
+const {img, name} = person
+
+console.log(img, name)
