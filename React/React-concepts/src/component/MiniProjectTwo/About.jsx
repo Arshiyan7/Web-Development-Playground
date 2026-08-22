@@ -15,7 +15,7 @@ export default function About(props) {
             </a>
             
 
-            <h1>{props.placename}</h1>
+            <h1>{props.placeName}</h1>
             <p className="date">{props.date}</p>
             <p className="description">{props.description}</p>
           </div>
