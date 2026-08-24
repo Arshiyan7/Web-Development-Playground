@@ -31,33 +31,33 @@
 // }
 
 // Applying .map and passing data as props in my travel journal
-import Header from "./component/MiniProjectTwo/Header";
-import travelData from "./component/MiniProjectTwo/travelData";
-import About from "./component/MiniProjectTwo/About";
+// import Header from "./component/MiniProjectTwo/Header";
+// import travelData from "./component/MiniProjectTwo/travelData";
+// import About from "./component/MiniProjectTwo/About";
 
-export default function App_two(){
+// export default function App_two(){
 
-  const travel = travelData.map((data)=>{
-    return(
-      <About
-    key = {data.placeName} // Good practice
-    img = {data.img}
-    CountryName = {data.CountryName}
-    GoogleMapUrl = {data.GoogleMapUrl}
-    placeName = {data.placeName}
-    date = {data.date}
-    description = {data.description}
-    />
-    )
-  })
+//   const travel = travelData.map((data)=>{
+//     return(
+//       <About
+//     key = {data.placeName} // Good practice
+//     img = {data.img}
+//     CountryName = {data.CountryName}
+//     GoogleMapUrl = {data.GoogleMapUrl}
+//     placeName = {data.placeName}
+//     date = {data.date}
+//     description = {data.description}
+//     />
+//     )
+//   })
 
-  return(
-    <div className="sections">
-      <Header />
-      {travel}
-    </div>
-  )
-}
+//   return(
+//     <div className="sections">
+//       <Header />
+//       {travel}
+//     </div>
+//   )
+// }
 
 
 // import Map_component from './component/MapMethod/map_method'
@@ -81,3 +81,15 @@ export default function App_two(){
 //     </>
 //   );
 // }
+
+import Header from './component/MiniProjectFour/header'
+import About from './component/MiniProjectFour/contents'
+
+export default function App(){
+  return(
+    <div className="section">
+      <Header/>
+      <About/>
+    </div>
+  )
+}
