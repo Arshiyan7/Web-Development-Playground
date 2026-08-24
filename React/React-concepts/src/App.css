@@ -49,7 +49,7 @@ body {
  */
 
 /* MINI Project 2 (Travel Journal) */
-header{
+/* header{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,7 +138,7 @@ header h1{
   font-size: 14px;
   color: rgb(66, 65, 65);
   line-height: 1.5;
-}
+} */
 
 /* MINI PROJECT 3 (Cats Contact) */
 /* body {
@@ -176,4 +176,75 @@ header h1{
   color: #555;
 } */
 
+/* MINI PROJECT 4 (Chef Claude) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.section {
+  width: 500px;
+  min-height: 600px;
+  background-color: #f9f8f7;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 24px;
+  padding: 15px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10);
+  margin-bottom: 45px;
+}
+header h1{
+  font-weight: 500;
+  font-size: 24px;
+}
+.userInput{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.userInput input{
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 300px;
+  font-style: italic;
+}
+.userInput button{
+  border: 1px solid #ddd;
+  background-color: black;
+  color: rgb(227, 224, 224);
+  padding: 6px;
+  border-radius: 5px;
+  width: 150px;
+}
+.userInput button:hover{
+  background-color: #E69500;
+  cursor: pointer;
+}
+.userInput button:active{
+  background-color: black;
+  cursor: pointer;
+}
