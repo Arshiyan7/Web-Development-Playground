@@ -177,7 +177,7 @@ header h1{
 } */
 
 /* MINI PROJECT 4 (Chef Claude) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -187,6 +187,7 @@ header h1{
 
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #e9eef5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,57 +195,149 @@ body {
   padding: 20px;
 }
 
+/* Main App Container */
 .section {
   width: 500px;
-  min-height: 600px;
-  background-color: #f9f8f7;
-  border: 1px solid rgb(220, 220, 220);
-  border-radius: 10px;
+  height: 600px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
 }
 
+/* Header */
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  font-size: 24px;
-  padding: 15px;
+  gap: 8px;
+  padding: 18px;
+  background-color: #172554;
+  color: white;
+  border-bottom: 3px solid #38bdf8;
+}
+
+header h1 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+header i {
+  font-size: 22px;
+  color: #38bdf8;
+}
+
+/* Content */
+.userInput,
+.aboutIngredients {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Input Area */
+.userInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 45px;
+}
+
+.userInput input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  outline: none;
   background-color: white;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10);
-  margin-bottom: 45px;
+  font-family: inherit;
+  font-size: 14px;
 }
-header h1{
+
+.userInput input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+.userInput button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 7px;
+  background-color: #2563eb;
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
   font-weight: 500;
-  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
-.userInput{
+
+.userInput button:hover {
+  background-color: #1d4ed8;
+}
+
+.userInput button:active {
+  background-color: #1e40af;
+}
+
+/* Ingredients */
+.aboutIngredients {
+  margin-top: 38px;
+  padding-bottom: 30px;
+}
+
+.aboutIngredients h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #172554;
+  margin-bottom: 18px;
+}
+
+.aboutIngredients ol {
+  padding-left: 25px;
+  color: #334155;
+}
+
+.aboutIngredients li {
+  padding: 5px 0;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* Generate Recipe Container styling */
+.generateRecipe{
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  background-color: #e4edf7;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
 }
-.userInput input{
-  padding: 6px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  width: 300px;
-  font-style: italic;
+.generateContent h3{
+  font-size: 16px;
+  margin-bottom: 5px;
 }
-.userInput button{
-  border: 1px solid #ddd;
-  background-color: black;
-  color: rgb(227, 224, 224);
-  padding: 6px;
-  border-radius: 5px;
-  width: 150px;
+.generateContent p{
+  font-size: 14px;
+  opacity: 0.7;
 }
-.userInput button:hover{
-  background-color: #E69500;
+.generateRecipe button{
+  padding: 8px 0;
+  width: 100px;
+  background: transparent;
+  background-color: #2563eb;
+  color: rgb(239, 239, 239);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
 }
-.userInput button:active{
-  background-color: black;
-  cursor: pointer;
+.generateRecipe button:hover {
+  background-color: #1d4ed8;
+}
+.generateRecipe button:active {
+  background-color: #1e40af;
 }
