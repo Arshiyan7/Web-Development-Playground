@@ -177,7 +177,7 @@ header h1{
 } */
 
 /* MINI PROJECT 4 (Chef Claude) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -195,7 +195,6 @@ body {
   padding: 20px;
 }
 
-/* Main App Container */
 .section {
   width: 500px;
   height: 600px;
@@ -206,7 +205,6 @@ body {
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -228,7 +226,6 @@ header i {
   color: #38bdf8;
 }
 
-/* Content */
 .userInput,
 .aboutIngredients {
   width: 88%;
@@ -236,7 +233,6 @@ header i {
   margin-right: auto;
 }
 
-/* Input Area */
 .userInput {
   display: flex;
   align-items: center;
@@ -281,7 +277,7 @@ header i {
   background-color: #1e40af;
 }
 
-/* Ingredients */
+
 .aboutIngredients {
   margin-top: 38px;
   padding-bottom: 30px;
@@ -305,7 +301,6 @@ header i {
   opacity: 0.8;
 }
 
-/* Generate Recipe Container styling */
 .generateRecipe{
   margin-top: 20px;
   border: 1px solid #ddd;
@@ -340,4 +335,32 @@ header i {
 }
 .generateRecipe button:active {
   background-color: #1e40af;
+}  */
+
+/* Practice CODE (!Project) */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #e9eef5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.container{
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+.container button{
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid #999696;
+}
+.container button:hover{
+  background-color: rgb(146, 146, 146);
+  cursor: pointer;
+  color: white;
 }

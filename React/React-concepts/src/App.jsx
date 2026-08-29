@@ -82,14 +82,23 @@
 //   );
 // }
 
-import Header from './component/MiniProjectFour/header'
-import About from './component/MiniProjectFour/contents'
+// import Header from './component/MiniProjectFour/header'
+// import About from './component/MiniProjectFour/contents'
 
+// export default function App(){
+//   return(
+//     <div className="section">
+//       <Header/>
+//       <About/>
+//     </div>
+//   )
+// }
+
+import State from './component/ReactMethod/States/useState'
 export default function App(){
   return(
     <div className="section">
-      <Header/>
-      <About/>
+      <State/>
     </div>
   )
 }
