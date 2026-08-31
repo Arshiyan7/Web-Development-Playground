@@ -94,11 +94,38 @@
 //   )
 // }
 
-import State from './component/ReactMethod/States/useState'
+// State in JSX
+// import State from './component/ReactMethod/States/useState'
+// export default function App(){
+//   return(
+//     <div className="section">
+//       <State/>
+//     </div>
+//   )
+// }
+
+//State Practice & toggle
+// import StatePractice from './component/ReactMethod/States/StatesPractice'
+// import StateToggle from './component/ReactMethod/States/StateToggling'
+
+// export default function App(){
+//   return(
+//       <>
+//     {/* <div className="section">
+//       <StatePractice/>
+//     </div> */}
+//     <StateToggle/>
+//       </>
+//   )
+// }
+
+// Practice file (!RELATED TO COURSE)
+import PracticeFile from './component/practice'
+
 export default function App(){
   return(
     <div className="section">
-      <State/>
+      <PracticeFile/>
     </div>
   )
 }
