@@ -82,14 +82,15 @@
 //   );
 // }
 
+//Chef Claude Project
 // import Header from './component/MiniProjectFour/header'
-// import About from './component/MiniProjectFour/contents'
+// import Contents from './component/MiniProjectFour/contents'
 
 // export default function App(){
 //   return(
 //     <div className="section">
 //       <Header/>
-//       <About/>
+//       <Contents/>
 //     </div>
 //   )
 // }
@@ -120,12 +121,38 @@
 // }
 
 // Practice file (!RELATED TO COURSE)
-import PracticeFile from './component/practice'
+// import PracticeFile from './component/practice'
 
+// export default function App(){
+//   return(
+//     <div className="section">
+//       <PracticeFile/>
+//     </div>
+//   )
+// }
+
+// Arrays in State: 
+// import ArrayState from './component/ReactMethod/States/StatesUsingArrays'
+
+// export default function App(){
+//   return(
+//     <ArrayState/>
+//   )
+// }
+
+// Objects in State: 
+// import ObjectState from './component/ReactMethod/States/StatesUsingObject'
+
+// export default function App(){
+//   return(
+//     <ObjectState/>
+//   )
+// }
+
+// Forms in React
+import Form from './component/Forms/Forms'
 export default function App(){
   return(
-    <div className="section">
-      <PracticeFile/>
-    </div>
+    <Form/>
   )
 }
