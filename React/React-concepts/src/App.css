@@ -500,45 +500,154 @@ header i {
 /* FORMS (MAYBE A PROJECT 🙃) */
 #my-form {
   width: 350px;
-  margin: 50px auto;
-  padding: 25px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #ffffff, #f3f6fb);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+#my-form:hover {
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Little accent bar across the top */
+#my-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00c6ff, #6a5acd);
 }
 
 #my-form label {
   display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #2c2c2c;
+  letter-spacing: 0.2px;
+  font-size: 14px;
 }
 
 #my-form .input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dcdfe4;
+  border-radius: 6px;
   box-sizing: border-box;
+  background-color: #fff;
+  font-size: 14px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
 }
 
 #my-form .input:focus {
   outline: none;
   border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+#my-form select.input {
+  background-color: white;
+  cursor: pointer;
 }
 
 #my-form input[type="submit"] {
   width: 100%;
-  padding: 10px;
+  padding: 9px;
   border: none;
-  border-radius: 5px;
-  background-color: #007bff;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: white;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.25s ease,
+    background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
 #my-form input[type="submit"]:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.4);
+  transform: translateY(-2px);
+}
+
+#my-form input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 86, 179, 0.3);
+}
+
+fieldset {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e4ea;
+  margin-bottom: 10px;
+  background-color: rgba(0, 123, 255, 0.02);
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+fieldset:hover {
+  border-color: #b8d4ff;
+  background-color: rgba(0, 123, 255, 0.04);
+}
+
+fieldset legend {
+  padding: 0 6px;
+  font-weight: 600;
+  color: #007bff;
+  font-size: 13px;
+}
+
+fieldset .labelField {
+  font-weight: 300;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  margin-bottom: 4px;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+fieldset label:last-child {
+  margin-bottom: 0;
+}
+
+fieldset label:hover {
+  background-color: rgba(0, 123, 255, 0.07);
+}
+
+fieldset input[type="checkbox"],
+fieldset input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #007bff;
 }
