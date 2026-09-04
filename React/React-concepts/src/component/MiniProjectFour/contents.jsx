@@ -3,17 +3,13 @@ import { useState } from "react";
 export default function Contents() {
   const [ingredients, setIngredients] = useState([]);
 
-  function SubmitForm(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.currentTarget);
+  function addIngredients(formData) {
     const newIngredient = formData.get("ingredient");
 
     setIngredients((prevIngredients) => [
       ...prevIngredients,
       newIngredient,
     ]);
-    event.currentTarget.reset();
   }
 
   const ingredientsListItems = ingredients.map((item) => (
@@ -22,7 +18,7 @@ export default function Contents() {
 
   return (
     <div className="contents">
-      <form onSubmit={SubmitForm}>
+      <form action={addIngredients}>
         <div className="userInput">
           <input
             type="text"
