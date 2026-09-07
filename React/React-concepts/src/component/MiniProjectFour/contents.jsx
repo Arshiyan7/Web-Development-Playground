@@ -6,10 +6,7 @@ export default function Contents() {
   function addIngredients(formData) {
     const newIngredient = formData.get("ingredient");
 
-    setIngredients((prevIngredients) => [
-      ...prevIngredients,
-      newIngredient,
-    ]);
+    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
   const ingredientsListItems = ingredients.map((item) => (
@@ -30,20 +27,23 @@ export default function Contents() {
         </div>
       </form>
 
-      <div className="aboutIngredients">
-        <h1>On-Hand Ingredients</h1>
+      {ingredients.length > 0 ? (
+        <div className="aboutIngredients">
+          <h2>On-Hand Ingredients</h2>
 
-        <ol>{ingredientsListItems}</ol>
+          <ol>{ingredientsListItems}</ol>
 
-        <div className="generateRecipe">
-          <div className="generateContent">
-            <h3>Ready to Cook?</h3>
-            <p>Discover what you can make with your ingredients.</p>
-          </div>
-
-          <button>Get Recipe</button>
+          {ingredients.length > 3 ? (
+            <div className="generateRecipe">
+              <div className="generateContent">
+                <h3>Ready to Cook?</h3>
+                <p>Discover what you can make with your ingredients.</p>
+              </div>
+              <button>Get Recipe</button>
+            </div>
+          ) : null}
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }
