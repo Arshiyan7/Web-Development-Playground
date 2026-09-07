@@ -150,9 +150,18 @@
 // }
 
 // Forms in React
-import Form from './component/Forms/Forms'
-export default function App(){
-  return(
-    <Form/>
-  )
-}
+// import Form from './component/Forms/Forms'
+// export default function App(){
+//   return(
+//     <Form/>
+//   )
+// }
+
+//conditional rendering in React
+// import Joke from './component/ConditionalRendering/jokes'
+
+// export default function App(){
+//   return(
+//     <Joke/>
+//   )
+// }
