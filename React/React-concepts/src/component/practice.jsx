@@ -24,17 +24,69 @@ export default function PracticeFile() {
   //     </>
   //   );
 
-  const [magic, setMagic] = useState(false);
+  //   const [magic, setMagic] = useState(false);
 
-  const magicBtn = () => {
-    setMagic(prev => !prev);
-  };
+  //   const magicBtn = () => {
+  //     setMagic(prev => !prev);
+  //   };
+
+  //   return (
+  //     <>
+  //       <h1>Want to see magic?</h1>
+  //       <button onClick={magicBtn}>{magic ? "Hide" : "Show"}</button>
+  //       {magic && <p>✨ Here's the magic!</p>}
+  //     </>
+  //   );
+  // }
+
+  // Objects using State:
+
+  //   const [student, setStudent] = useState({
+  //     name: "Hamza",
+  //     age: 20,
+  //     course: "React",
+  //   });
+
+  //   const changeName = () => {
+  //     setStudent({
+  //       ...student,
+  //       name : "Ali"
+  //     })
+  //   }
+
+  //   return (
+  //     <>
+  //       <h1>Name: {student.name}</h1>
+  //       <h1>Age: {student.age}</h1>
+  //       <h1>Course: {student.course}</h1>
+  //       <button onClick={changeName}>Change Name</button>
+  //     </>
+  //   );
+  //
+
+  // Arrays using state:
+
+  const [colors, setColors] = useState(["Red", "Green", "Blue"]);
+
+  function renderColors() {
+    return colors.map((color, index) => <h1 key={index}>{color}</h1>);
+  }
+
+  const addColor = () => {
+    setColors([
+      ...colors,
+      "Yellow"
+    ])
+  }
+  const removeColor = () => {
+    setColors(prevColor => prevColor.filter(color => color != "Green"))
+  }
 
   return (
     <>
-      <h1>Want to see magic?</h1>
-      <button onClick={magicBtn}>{magic ? "Hide" : "Show"}</button>
-      {magic && <p>✨ Here's the magic!</p>}
+      {renderColors()}
+      <button onClick={addColor}>Add Color</button>
+      <button onClick={removeColor}>Remove Green</button>
     </>
   );
 }

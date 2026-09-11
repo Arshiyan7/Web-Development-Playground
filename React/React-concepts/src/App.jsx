@@ -59,7 +59,6 @@
 //   )
 // }
 
-
 // import Map_component from './component/MapMethod/map_method'
 // import Pokemons from './component/MapMethod/map_method';
 // import pokemons from './component/MapMethod/pokemons'
@@ -131,7 +130,7 @@
 //   )
 // }
 
-// Arrays in State: 
+// Arrays in State:
 // import ArrayState from './component/ReactMethod/States/StatesUsingArrays'
 
 // export default function App(){
@@ -140,13 +139,13 @@
 //   )
 // }
 
-// Objects in State: 
-// import ObjectState from './component/ReactMethod/States/StatesUsingObject'
+// Objects in State:
+// import ObjectState from "./component/ReactMethod/States/StatesAndProps/StatesUsingObject";
 
-// export default function App(){
-//   return(
-//     <ObjectState/>
-//   )
+// export default function App() {
+//   return (
+//       <ObjectState />
+//   );
 // }
 
 // Forms in React
@@ -165,3 +164,27 @@
 //     <Joke/>
 //   )
 // }
+
+//Passing data around React
+// import Header from "./component/Passing_Data_inReact/Header";
+// import About from "./component/Passing_Data_inReact/About.jsx";
+// import { useState } from "react";
+
+// export default function App() {
+//   const [name, setName] = useState("John");
+//   const [age, setAge] = useState(25);
+
+//   return (
+//     <>
+//       <Header name={name} />
+//       <About age={age} />
+//     </>
+//   );
+// }
+
+//Soundpad Project:
+import SoundPad from "./component/MiniProjectFive/soundPads.jsx"
+
+export default function App() {
+    return <SoundPad />
+}
