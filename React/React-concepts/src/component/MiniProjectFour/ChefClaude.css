@@ -1,0 +1,288 @@
+/* Chef Claude */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #e9eef5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main container */
+
+.section {
+  width: 500px;
+  min-height: 600px;
+  height: auto;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px;
+  background-color: #172554;
+  color: white;
+  border-bottom: 3px solid #38bdf8;
+}
+
+header h1 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+header i {
+  font-size: 22px;
+  color: #38bdf8;
+}
+
+/* Input area */
+
+.userInput {
+  width: 88%;
+  margin: 45px auto 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userInput input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  outline: none;
+
+  background-color: white;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.userInput input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+.userInput button {
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #2563eb;
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.userInput button:hover {
+  background-color: #1d4ed8;
+}
+
+.userInput button:active {
+  background-color: #1e40af;
+}
+
+/* Ingredients section */
+
+.aboutIngredients {
+  width: 88%;
+  margin: 38px auto 0;
+  padding-bottom: 30px;
+}
+
+.aboutIngredients h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #172554;
+  margin-bottom: 18px;
+}
+
+.aboutIngredients ol {
+  padding-left: 25px;
+  color: #334155;
+}
+
+.aboutIngredients li {
+  padding: 5px 0;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* Generate recipe box */
+
+.generateRecipe {
+  margin-top: 20px;
+
+  border: 1px solid #ddd;
+  background-color: #e4edf7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+  border-radius: 8px;
+  gap: 15px;
+}
+
+.generateContent {
+  flex: 1;
+}
+
+.generateContent h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.generateContent p {
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.generateRecipe button {
+  flex-shrink: 0;
+
+  padding: 8px 12px;
+  width: 100px;
+
+  background-color: #2563eb;
+  color: rgb(239, 239, 239);
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.generateRecipe button:hover {
+  background-color: #1d4ed8;
+}
+
+.generateRecipe button:active {
+  background-color: #1e40af;
+}
+
+/* Recipe section */
+
+section {
+  width: 88%;
+  margin: 10px auto 40px;
+}
+
+section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #172554;
+  margin-bottom: 15px;
+}
+
+/* Recipe card */
+
+.suggested-recipe-container {
+  background-color: white;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  padding: 20px;
+
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.suggested-recipe-container p {
+  margin-bottom: 15px;
+}
+
+.suggested-recipe-container h3 {
+  font-size: 18px;
+  color: #172554;
+  margin: 20px 0 10px;
+}
+
+.suggested-recipe-container strong {
+  color: #172554;
+}
+
+.suggested-recipe-container ul,
+.suggested-recipe-container ol {
+  padding-left: 25px;
+  margin-top: 8px;
+}
+
+.suggested-recipe-container li {
+  margin-bottom: 8px;
+}
+
+/* Responsive design */
+
+@media (max-width: 550px) {
+  body {
+    padding: 10px;
+  }
+
+  .section {
+    width: 100%;
+  }
+
+  .userInput,
+  .aboutIngredients,
+  section {
+    width: 92%;
+  }
+
+  .userInput {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .userInput button {
+    width: 100%;
+  }
+
+  .generateRecipe {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .generateRecipe button {
+    width: 100px;
+  }
+}
