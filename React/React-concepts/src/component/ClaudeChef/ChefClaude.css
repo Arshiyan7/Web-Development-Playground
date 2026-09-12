@@ -1,0 +1,502 @@
+/* ================================
+   Chef Claude
+================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+/* ================================
+   Reset
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f3f0ea;
+  color: #292524;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: 100vh;
+  padding: 35px 20px;
+}
+
+/* ================================
+   Main Container
+================================ */
+
+.section {
+  width: 520px;
+  min-height: 600px;
+
+  background: #fffdf9;
+
+  border: 1px solid #e7e1d7;
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 50px rgba(41, 37, 36, 0.1),
+    0 4px 12px rgba(41, 37, 36, 0.05);
+
+  overflow: hidden;
+}
+
+/* ================================
+   Header
+================================ */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 22px;
+
+  background: #292524;
+  color: #fffdf9;
+
+  border-bottom: 4px solid #f97316;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+header i {
+  font-size: 22px;
+  color: #fb923c;
+}
+
+/* ================================
+   Input Area
+================================ */
+
+.userInput {
+  width: 88%;
+  margin: 38px auto 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userInput input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d6d3d1;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #292524;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.userInput input::placeholder {
+  color: #a8a29e;
+}
+
+.userInput input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+.userInput button {
+  padding: 12px 15px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #ea580c;
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.userInput button:hover {
+  background: #c2410c;
+}
+
+.userInput button:active {
+  transform: translateY(1px);
+}
+
+/* ================================
+   Ingredients Section
+================================ */
+
+.aboutIngredients {
+  width: 88%;
+  margin: 38px auto 0;
+  padding-bottom: 28px;
+}
+
+.aboutIngredients h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #292524;
+
+  margin-bottom: 17px;
+}
+
+.aboutIngredients ol {
+  padding-left: 26px;
+  color: #57534e;
+}
+
+.aboutIngredients li {
+  padding: 5px 0 5px 4px;
+
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* ================================
+   Generate Recipe Box
+================================ */
+
+.generateRecipe {
+  margin-top: 22px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+
+  background: #fff7ed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+  gap: 16px;
+}
+
+.generateContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.generateContent h3 {
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #431407;
+
+  margin-bottom: 5px;
+}
+
+.generateContent p {
+  font-size: 13px;
+  color: #78716c;
+
+  line-height: 1.5;
+}
+
+.generateRecipe button {
+  flex-shrink: 0;
+
+  padding: 10px 13px;
+  width: 105px;
+
+  background: #ea580c;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.generateRecipe button:hover {
+  background: #c2410c;
+}
+
+.generateRecipe button:active {
+  transform: translateY(1px);
+}
+
+/* ================================
+   Recipe Section
+================================ */
+
+section {
+  width: 88%;
+  margin: 8px auto 40px;
+}
+
+section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #292524;
+
+  margin-bottom: 16px;
+}
+
+/* ================================
+   Recipe Card
+================================ */
+
+.suggested-recipe-container {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e1d7;
+  border-radius: 13px;
+
+  padding: 23px;
+
+  color: #44403c;
+  font-size: 14px;
+  line-height: 1.7;
+
+  box-shadow: 0 6px 18px rgba(41, 37, 36, 0.06);
+
+  overflow-wrap: anywhere;
+}
+
+.suggested-recipe-container p {
+  margin-bottom: 18px;
+}
+
+.suggested-recipe-container h1,
+.suggested-recipe-container h2,
+.suggested-recipe-container h3 {
+  font-family: "Playfair Display", serif;
+  color: #292524;
+}
+
+.suggested-recipe-container h1 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.suggested-recipe-container h2 {
+  font-size: 20px;
+  margin: 22px 0 10px;
+}
+
+.suggested-recipe-container h3 {
+  font-size: 18px;
+  margin: 20px 0 10px;
+}
+
+.suggested-recipe-container strong {
+  color: #9a3412;
+}
+
+.suggested-recipe-container ul,
+.suggested-recipe-container ol {
+  padding-left: 25px;
+  margin-top: 8px;
+}
+
+.suggested-recipe-container li {
+  margin-bottom: 8px;
+  padding-left: 3px;
+}
+
+.suggested-recipe-container li::marker {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+/* ================================
+   Tablet
+================================ */
+
+@media (max-width: 700px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  .section {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 550px) {
+  body {
+    padding: 10px;
+  }
+
+  .section {
+    width: 100%;
+    min-height: 0;
+
+    border-radius: 14px;
+  }
+
+  header {
+    padding: 18px 15px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  header i {
+    font-size: 20px;
+  }
+
+  .userInput,
+  .aboutIngredients,
+  section {
+    width: 92%;
+  }
+
+  .userInput {
+    margin-top: 28px;
+
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .userInput input,
+  .userInput button {
+    width: 100%;
+  }
+
+  .userInput input {
+    padding: 13px;
+  }
+
+  .userInput button {
+    padding: 13px;
+  }
+
+  .aboutIngredients {
+    margin-top: 30px;
+  }
+
+  .aboutIngredients h2,
+  section h2 {
+    font-size: 20px;
+  }
+
+  /* Recipe CTA */
+  .generateRecipe {
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 15px;
+  }
+
+  .generateContent {
+    text-align: left;
+  }
+
+  .generateRecipe button {
+    width: 100%;
+  }
+
+  /* Recipe */
+  section {
+    margin-bottom: 25px;
+  }
+
+  .suggested-recipe-container {
+    padding: 18px;
+
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .suggested-recipe-container h1 {
+    font-size: 22px;
+  }
+
+  .suggested-recipe-container h2 {
+    font-size: 19px;
+  }
+
+  .suggested-recipe-container h3 {
+    font-size: 17px;
+  }
+
+  .suggested-recipe-container ul,
+  .suggested-recipe-container ol {
+    padding-left: 22px;
+  }
+}
+
+/* ================================
+   Small Phones
+================================ */
+
+@media (max-width: 380px) {
+  body {
+    padding: 6px;
+  }
+
+  .section {
+    border-radius: 10px;
+  }
+
+  header {
+    padding: 16px 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .userInput,
+  .aboutIngredients,
+  section {
+    width: 94%;
+  }
+
+  .generateRecipe {
+    padding: 13px;
+  }
+
+  .suggested-recipe-container {
+    padding: 15px;
+  }
+}
