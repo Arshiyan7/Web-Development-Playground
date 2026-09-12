@@ -82,17 +82,17 @@
 // }
 
 //Chef Claude Project
-// import Header from './component/MiniProjectFour/header'
-// import Contents from './component/MiniProjectFour/contents'
+import Header from './component/ClaudeChef/header'
+import Contents from './component/ClaudeChef/contents'
 
-// export default function App(){
-//   return(
-//     <div className="section">
-//       <Header/>
-//       <Contents/>
-//     </div>
-//   )
-// }
+export default function App(){
+  return(
+    <div className="section">
+      <Header/>
+      <Contents/>
+    </div>
+  )
+}
 
 // State in JSX
 // import State from './component/ReactMethod/States/useState'
@@ -183,8 +183,8 @@
 // }
 
 //Soundpad Project:
-import SoundPad from "./component/MiniProjectFive/soundPads.jsx"
+// import SoundPad from "./component/MiniProjectFive/soundPads.jsx"
 
-export default function App() {
-    return <SoundPad />
-}
+// export default function App() {
+//     return <SoundPad />
+// }
