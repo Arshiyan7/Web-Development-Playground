@@ -82,17 +82,17 @@
 // }
 
 //Chef Claude Project
-import Header from './component/ClaudeChef/header'
-import Contents from './component/ClaudeChef/contents'
+// import Header from './component/ClaudeChef/header'
+// import Contents from './component/ClaudeChef/contents'
 
-export default function App(){
-  return(
-    <div className="section">
-      <Header/>
-      <Contents/>
-    </div>
-  )
-}
+// export default function App(){
+//   return(
+//     <div className="section">
+//       <Header/>
+//       <Contents/>
+//     </div>
+//   )
+// }
 
 // State in JSX
 // import State from './component/ReactMethod/States/useState'
@@ -120,15 +120,15 @@ export default function App(){
 // }
 
 // Practice file (!RELATED TO COURSE)
-// import PracticeFile from './component/practice'
+import Counter from './component/practice.jsx'
 
-// export default function App(){
-//   return(
-//     <div className="section">
-//       <PracticeFile/>
-//     </div>
-//   )
-// }
+export default function App(){
+  return(
+    <div className="section">
+      <Counter/>
+    </div>
+  )
+}
 
 // Arrays in State:
 // import ArrayState from './component/ReactMethod/States/StatesUsingArrays'
@@ -187,4 +187,25 @@ export default function App(){
 
 // export default function App() {
 //     return <SoundPad />
+// }
+
+// Meme generator 
+// import Header from './component/Section4/MemeGenerator/Header'
+// import Main from './component/Section4/MemeGenerator/Main'
+// import './component/Section4/MemeGenerator/meme.css'
+// export default function App(){
+//   return(
+//     <>
+//     <Header/>
+//     <Main/>
+//     </>
+//   )
+// }
+
+// API Fetch
+// import APIFetch from './component/Section4/UseEffect'
+// export default function App(){
+//   return(
+//     <APIFetch/>
+//   )
 // }
