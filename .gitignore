@@ -8,3 +8,5 @@ yarn-error.log*
 .env
 .DS_Store
 Front-end-projects/help.txt
+# Local Netlify folder
+.netlify
