@@ -81,7 +81,7 @@
 //   );
 // }
 
-//Chef Claude Project
+// Chef Claude Project
 // import Header from './component/ClaudeChef/header'
 // import Contents from './component/ClaudeChef/contents'
 
@@ -120,12 +120,15 @@
 // }
 
 // Practice file (!RELATED TO COURSE)
-import Counter from './component/practice.jsx'
-
+// import practiceOne from './component/Practice_files/practiceOne.jsx'
+// import PracticeTwo from './component/Practice_files/PropsPractice'
+import PracticeThree from './component/Practice_files/listRendering'
 export default function App(){
   return(
     <div className="section">
-      <Counter/>
+      {/* <practiceOne/> */}
+       {/* <PracticeTwo/> */}
+       <PracticeThree/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./ChefClaude.css";
 import IngredientsList from "./IngredientsList.jsx";
 import ClaudeRecipe from "./ClaudeRecipe.jsx";
@@ -10,6 +10,7 @@ export default function Contents() {
   const [recipeShown, setRecipeShown] = useState(false);
   const [recipe, setRecipe] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
+  const inputRef = useRef(null);
 
   const toggleRecipe = async () => {
     if (ingredients.length < 4 || isGenerating) return;
@@ -31,7 +32,12 @@ export default function Contents() {
 
     if (!newIngredient) return;
 
-    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
+    setIngredients((prevIngredients) => [
+      ...prevIngredients,
+      newIngredient,
+    ]);
+
+    inputRef.current.focus();
   }
 
   return (
@@ -39,6 +45,7 @@ export default function Contents() {
       <form action={addIngredients}>
         <div className="userInput">
           <input
+            ref={inputRef}
             type="text"
             name="ingredient"
             placeholder="e.g. chicken, tomatoes, garlic..."
@@ -54,7 +61,10 @@ export default function Contents() {
       />
 
       {recipeShown && (
-        <ClaudeRecipe recipe={recipe} isGenerating={isGenerating} />
+        <ClaudeRecipe
+          recipe={recipe}
+          isGenerating={isGenerating}
+        />
       )}
     </div>
   );
