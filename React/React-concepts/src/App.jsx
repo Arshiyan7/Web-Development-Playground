@@ -122,15 +122,70 @@
 // Practice file (!RELATED TO COURSE)
 // import practiceOne from './component/Practice_files/practiceOne.jsx'
 // import PracticeTwo from './component/Practice_files/PropsPractice'
-import PracticeThree from './component/Practice_files/listRendering'
-export default function App(){
-  return(
+// import PracticeThree from './component/Practice_files/listRendering'
+
+// import { useState } from "react";
+// Lifting State imports 1
+// import Results from './component/Practice_files/LiftingState/results'
+// import SearchBar from './component/Practice_files/LiftingState/searchBar'
+
+// Lifting State imports 2 (ProfileState)
+// import Name from "./component/Practice_files/LiftingState/profileState/name";
+// import Role from "./component/Practice_files/LiftingState/profileState/role";
+// import Image from "./component/Practice_files/LiftingState/profileState/image";
+// import UserProfile from "./component/Practice_files/LiftingState/profileState/profile";
+
+//forms in React 
+import FormReact from './component/Practice_files/formsAndEvents/ContactForm'
+
+export default function App() {
+  {
+    /*Lifting state function 1*/
+  }
+  // const [inputValue, setInputValue] = useState("")
+  // const HandleValueChange = (name) =>{
+  //   setInputValue(name)
+  // }
+
+  //{
+    /*Lifting state function 2*/
+  //}
+  // const [name, setName] = useState("");
+  // const [role, setRole] = useState("");
+  // const [image, setImage] = useState("");
+
+  // const setnameInput = (name) => {
+  //   setName(name);
+  // };
+  // const setroleInput = (role) => {
+  //   setRole(role);
+  // };
+  // const setimageInput = (image) => {
+  //   setImage(image);
+  // };
+
+  return (
     <div className="section">
       {/* <practiceOne/> */}
-       {/* <PracticeTwo/> */}
-       <PracticeThree/>
+      {/* <PracticeTwo/> */}
+      {/* <PracticeThree/> */}
+
+      {/*Lifting state in React*/}
+      {/* <SearchBar onChangeValue={HandleValueChange}/>
+       <Results result={inputValue}/> */}
+
+      {/*Lifting state in React 2*/}
+      {/* <Name onChangeName={setnameInput} />
+      <Role onChangeRole={setroleInput} />
+      <Image onChangeImage={setimageInput} />
+
+      <UserProfile name={name} role={role} image={image} /> */}
+
+      {/*Forms in React*/}
+      <FormReact/>
+
     </div>
-  )
+  );
 }
 
 // Arrays in State:
@@ -192,7 +247,7 @@ export default function App(){
 //     return <SoundPad />
 // }
 
-// Meme generator 
+// Meme generator
 // import Header from './component/Section4/MemeGenerator/Header'
 // import Main from './component/Section4/MemeGenerator/Main'
 // import './component/Section4/MemeGenerator/meme.css'
