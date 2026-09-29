@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+let username = "Arshiyan";
+let age = 23;
+let isStudent = true;
+console.log(`My name is : ${username}`);
+console.log(`My Age is : ${age}`);
+console.log(`My status is : ${isStudent}`);
+const names = ["Ali", "Ahmed", "Sara"];
+const scores = [85, 92, 78];
+console.log(names, "\n", scores);
