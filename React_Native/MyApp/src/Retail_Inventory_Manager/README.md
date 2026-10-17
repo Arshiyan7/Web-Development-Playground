@@ -49,39 +49,9 @@ Retail-Inventory-Manager/
 - React Native development environment
 - Android Studio and an Android emulator, or a compatible Android device
 
-### Installation
+### View the Project
 
-1. Clone the repository
-
-```bash
-   git clone https://github.com/YOUR-USERNAME/retail-inventory-manager.git
-```
-
-2. Navigate to the project directory
-
-```bash
-   cd retail-inventory-manager
-```
-
-3. Install dependencies
-
-```bash
-   npm install
-```
-
-4. Start the Metro bundler
-
-```bash
-   npm start
-```
-
-5. Run the Android application
-
-   Open a separate terminal and run:
-
-```bash
-   npm run android
-```
+[Retail Inventory Manager](https://github.com/Arshiyan7/Web-Development-Playground/tree/master/React_Native/MyApp/src/Retail_Inventory_Manager)
 
 > **Note:** Make sure your local React Native environment is configured before running the application.
 
