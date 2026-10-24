@@ -124,22 +124,23 @@ const styles = StyleSheet.create({
   // Product rows
   productRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#F0F2F5',
+    gap: 12,
+    paddingVertical: 20,
   },
 
   productName: {
     flex: 1,
-    fontSize: 14,
+    flexShrink: 1,
+    fontSize: 16,
     fontWeight: '500',
     color: '#253858',
   },
 
   quantity: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '700',
     paddingVertical: 5,
     paddingHorizontal: 10,
@@ -176,7 +177,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E8ECF2',
   },
-
+  editingContainer: {
+    borderWidth: 2,
+    borderColor: '#3984E8',
+    borderRadius: 12,
+  },
   input: {
     backgroundColor: '#F3F4F6',
     borderWidth: 1,
