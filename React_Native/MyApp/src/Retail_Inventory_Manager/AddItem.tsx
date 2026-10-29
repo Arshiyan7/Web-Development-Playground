@@ -94,7 +94,6 @@ export default function AddItem({ navigation, items, setItems }) {
       setNegativeInput('');
     }
   };
-
   const HandleEdit = item => {
     setName(item.name);
     setQuantity(item.quantity.toString());
