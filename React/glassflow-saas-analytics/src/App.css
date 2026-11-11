@@ -1,0 +1,16 @@
+.app-container {
+  display: flex; /* sidebar | main, side by side */
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  flex: 1; /* fill the space the sidebar doesn't use */
+  min-width: 0; /* lets charts/tables shrink instead of overflowing */
+  display: flex;
+  flex-direction: column; /* header on top, content below */
+}
+
+.content-area {
+  flex: 1;
+  padding: var(--space-6);
+}
