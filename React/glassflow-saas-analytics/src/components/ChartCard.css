@@ -1,0 +1,24 @@
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  min-width: 0;                 /* stops the chart from stretching the grid cell */
+}
+
+.chart-card__title {
+  margin: 0 0 var(--space-1);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.chart-card__subtitle {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.chart-card__body {
+  height: 300px;                /* ResponsiveContainer needs a parent with real height */
+  min-width: 0;
+}
