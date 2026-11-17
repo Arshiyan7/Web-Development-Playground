@@ -1,0 +1,46 @@
+.analytics-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Same 3-across card row as the Dashboard */
+.analytics-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 280px));
+  justify-content: start;
+  gap: var(--space-4);
+}
+
+/* Wide chart + narrow chart */
+.analytics-charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-4);
+}
+
+.analytics-table-card {
+  overflow: hidden;
+}
+
+.analytics-table-head {
+  padding: var(--space-6) var(--space-6) 0;
+}
+
+.analytics-table-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .analytics-metrics { grid-template-columns: repeat(2, minmax(0, 280px)); }
+}
+
+@media (max-width: 1100px) {
+  .analytics-charts { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .analytics-metrics { grid-template-columns: minmax(0, 1fr); }
+}
