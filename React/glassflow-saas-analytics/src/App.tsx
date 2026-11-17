@@ -3,6 +3,9 @@ import Header from './components/Header';
 import DashboardView from './views/DashboardView';
 import { Routes, Route } from "react-router";
 import CustomersView from "./views/CustomersView";
+import SettingsView from './views/SettingsView';
+import AnalyticsView from "./views/AnalyticsView";
+import RevenueView from './views/RevenueView';
 import './App.css';
 import "./App.css";
 
@@ -16,10 +19,10 @@ export function App() {
           <Routes>
             <Route path="/" element={<DashboardView />} />
             <Route path="/customers" element={<CustomersView />} />X
-            {/* add each page as you build it:
-            <Route path="/analytics" element={<AnalyticsView />} />
-            <Route path="/revenue" element={<RevenueView />} />
-            <Route path="/settings" element={<SettingsView />} /> */}
+            <Route path="/settings" element={<SettingsView />} /> 
+            ◘<Route path="/analytics" element={<AnalyticsView />} />
+            ◘<Route path="/revenue" element={<RevenueView />} />
+            
           </Routes>
         </main>
       </div>
