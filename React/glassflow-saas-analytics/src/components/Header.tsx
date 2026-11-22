@@ -1,6 +1,6 @@
 import React from "react";
 import { Bell, User, Menu } from "lucide-react";
-import "./Header.css";
+import "./header.css";
 
 interface HeaderProps {
   onMenuClick: () => void;
