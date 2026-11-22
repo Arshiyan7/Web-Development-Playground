@@ -139,6 +139,11 @@ body {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
 }
+
+.btn:disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
 /* ---------- Shared table ---------- */
 .table-wrap { overflow-x: auto; }
 
