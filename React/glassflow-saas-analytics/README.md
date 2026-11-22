@@ -2,9 +2,7 @@
 
 A dark, glassmorphism-style SaaS analytics dashboard built with React and TypeScript. It has five working pages, interactive charts, and real state-driven features, all running on mock data with no backend.
 
-Live demo: [add your deployed link here]
-
-![GlassFlow dashboard](./screenshots/dashboard.png)
+[Live demo](https://vercel.com/py-techie)
 
 ## Overview
 
