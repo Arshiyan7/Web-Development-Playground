@@ -1,18 +1,22 @@
-import React from 'react';
-import { Search, Bell, User } from 'lucide-react';
-import './header.css'
+import React from "react";
+import { Bell, User, Menu } from "lucide-react";
+import "./header.css";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onMenuClick: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
   return (
     <header className="header">
-      <div className="search-container">
-        <Search className="search-icon" />
-        <input
-          type="text"
-          placeholder="Search metrics, reports, or customers..."
-          className="search-input"
-        />
-      </div>
+      <button
+        type="button"
+        className="menu-btn"
+        aria-label="Open menu"
+        onClick={onMenuClick}
+      >
+        <Menu className="bell-icon" />
+      </button>
 
       <div className="header-actions">
         <button className="notification-btn">

@@ -1,26 +1,35 @@
 import React from "react";
+import type { ActivityItem } from "../types/activity";
 import "./RecentActivity.css";
 
-export const RecentActivity: React.FC = () => {
+interface ActivityList {
+  activities: ActivityItem[];
+}
+
+export const RecentActivity: React.FC<ActivityList> = ({ activities }) => {
   return (
     <section className="recent-activity glass">
       <div className="recent-activity__head">
         <h2 className="recent-activity__title">Recent Activity</h2>
-        <p className="recent-activity__subtitle">Latest events on your platform</p>
+        <p className="recent-activity__subtitle">
+          Latest events on your platform
+        </p>
       </div>
 
       <ul className="activity-list">
-        {/* TODO (you): replace this sample row with one <li> per item in recentActivity.
-            Use the item's `kind` for the dot's modifier class: activity-dot--${kind} */}
-        <li className="activity-item">
-          <span className="activity-dot activity-dot--upgrade"></span>
-          <div className="activity-text">
-            <p className="activity-line">
-              <strong>Amelia Hart</strong> upgraded to Enterprise
-            </p>
-            <p className="activity-time">12m ago</p>
-          </div>
-        </li>
+        {activities.map((activity) => (
+          <li key={activity.id} className="activity-item">
+            <span
+              className={`activity-dot activity-dot--${activity.kind}`}
+            ></span>
+            <div className="activity-text">
+              <p className="activity-line">
+                <strong>{activity.user}</strong> {activity.action}
+              </p>
+              <p className="activity-time">{activity.time}</p>
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   );

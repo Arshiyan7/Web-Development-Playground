@@ -1,14 +1,16 @@
 import React from "react";
-import type { CustomerStatus } from "../types/customer";
+import type { BadgeStatus } from "../types/status";
 import "./StatusBadge.css";
 
-const labels: Record<CustomerStatus, string> = {
+const labels: Record<BadgeStatus, string> = {
   active: "Active",
   pending: "Pending",
   inactive: "Inactive",
+  paid: "Paid",
+  failed: "Failed",
 };
 
-export const StatusBadge: React.FC<{ status: CustomerStatus }> = ({ status }) => {
+export const StatusBadge: React.FC<{ status: BadgeStatus }> = ({ status }) => {
   return <span className={`status-badge status-badge--${status}`}>{labels[status]}</span>;
 };
 

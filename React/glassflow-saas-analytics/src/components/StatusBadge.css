@@ -28,12 +28,8 @@
 .status-badge--active,
 .status-badge--paid {
   color: var(--success);
-  background: color-mix(in srgb, var(--success) 14%, transparent);
-  border-color: color-mix(in srgb, var(--success) 30%, transparent);
 }
 
 .status-badge--failed {
   color: var(--danger);
-  background: color-mix(in srgb, var(--danger) 14%, transparent);
-  border-color: color-mix(in srgb, var(--danger) 30%, transparent);
 }

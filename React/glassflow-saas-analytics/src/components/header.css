@@ -17,53 +17,12 @@
   backdrop-filter: blur(var(--glass-blur));
 }
 
-/* ---------- Search ---------- */
-.search-container {
-  position: relative;
-  flex: 1;
-  max-width: 420px;
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-left: auto;
 }
-
-.search-icon {
-  position: absolute;
-  left: var(--space-4);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  color: var(--text-muted);
-  pointer-events: none;       /* clicks pass through to the input */
-}
-
-.search-input {
-  width: 100%;
-  padding: var(--space-3) var(--space-4) var(--space-3) 44px;  /* left room for icon */
-
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  color: var(--text);
-  font-family: inherit;
-  font-size: 0.875rem;
-  transition: border-color var(--transition), box-shadow var(--transition),
-              background var(--transition);
-}
-
-.search-input::placeholder {
-  color: var(--text-muted);
-}
-
-.search-input:hover {
-  border-color: var(--glass-border-strong);
-}
-
-.search-input:focus {
-  outline: none;
-  background: var(--glass-bg-hover);
-  border-color: var(--accent);
-  box-shadow: 0 0 0 0.4px var(--accent-ring);
-}
-
 /* ---------- Right side ---------- */
 .header-actions {
   display: flex;
@@ -154,4 +113,31 @@
   margin: 0;
   font-size: 0.75rem;
   color: var(--text-muted);
+}
+.menu-btn {
+  display: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.menu-btn:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-strong);
+}
+
+@media (max-width: 900px) {
+  .menu-btn { display: grid; }
+  .header { gap: var(--space-3); padding: var(--space-3) var(--space-4); }
+}
+
+@media (max-width: 640px) {
+  .user-info { display: none; }
 }
