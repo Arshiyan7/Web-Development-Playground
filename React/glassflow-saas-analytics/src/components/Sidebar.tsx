@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router";
 import { LayoutDashboard, LineChart, Users, DollarSign, Settings } from "lucide-react";
-import "./sidebar.css";
+import "./Sidebar.css";
 
 interface SidebarProps {
   isOpen: boolean;
