@@ -35,7 +35,7 @@ Prerequisites: a recent version of Node.js (22 or later recommended) and npm.
 
 ```bash
 # clone the repository
-git clone https://github.com/Arshiyan7/glassflow-saas-analytics.git
+git clone https://github.com/Arshiyan7/Web-Development-Playground/tree/master/React/glassflow-saas-analytics
 cd glassflow-saas-analytics
 
 # install dependencies
