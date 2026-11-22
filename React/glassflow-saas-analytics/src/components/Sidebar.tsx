@@ -3,6 +3,11 @@ import { NavLink } from "react-router";
 import { LayoutDashboard, LineChart, Users, DollarSign, Settings } from "lucide-react";
 import "./sidebar.css";
 
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 const navItems = [
   { label: "Dashboard", icon: LayoutDashboard, path: "/" },
   { label: "Analytics", icon: LineChart, path: "/analytics" },
@@ -11,9 +16,9 @@ const navItems = [
   { label: "Settings", icon: Settings, path: "/settings" },
 ];
 
-export const Sidebar: React.FC = () => {
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? "sidebar--open" : ""}`}>
       <div className="sidebar-top">
         <div className="sidebar-brand">
           <div className="sidebar-logo">GF</div>
@@ -29,6 +34,7 @@ export const Sidebar: React.FC = () => {
                 to={item.path}
                 end={item.path === "/"}
                 className="nav-item"
+                onClick={onClose}
               >
                 <Icon className="nav-icon" />
                 <span className="nav-label">{item.label}</span>
