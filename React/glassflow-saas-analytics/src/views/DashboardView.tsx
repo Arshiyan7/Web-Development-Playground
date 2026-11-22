@@ -1,10 +1,12 @@
 import React from "react";
+import PageHeader from "../components/PageHeader";
 import MetricCard from "../components/MetricCard";
-import type { MetricCardProps } from "../types/dashboard";
 import ChartCard from "../components/ChartCard";
 import AreaTrendChart from "../components/charts/AreaTrendChart";
 import RecentActivity from "../components/RecentActivity";
-import { activeUsers } from "../data/analytics"; 
+import type { MetricCardProps } from "../types/dashboard";
+import { activeUsers } from "../data/analytics";
+import { recentActivity } from "../data/activity";
 import "./DashboardView.css";
 
 const mockMetrics: MetricCardProps[] = [
@@ -34,12 +36,10 @@ const mockMetrics: MetricCardProps[] = [
 export const DashboardView: React.FC = () => {
   return (
     <div className="dashboard-view">
-      <div className="page-header">
-        <h1 className="page-title">Dashboard Overview</h1>
-        <p className="page-subtitle">
-          Real-time metrics and platform analytics
-        </p>
-      </div>
+      <PageHeader
+        title="Dashboard Overview"
+        subtitle="Real-time metrics and platform analytics"
+      />
 
       <div className="metrics-grid">
         {mockMetrics.map((metric) => (
@@ -59,7 +59,8 @@ export const DashboardView: React.FC = () => {
             valueFormatter={(v) => v.toLocaleString()}
           />
         </ChartCard>
-        <RecentActivity />
+
+        <RecentActivity activities={recentActivity} />
       </div>
     </div>
   );

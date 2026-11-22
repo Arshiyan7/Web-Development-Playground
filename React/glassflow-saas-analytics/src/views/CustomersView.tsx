@@ -5,23 +5,25 @@ import PageHeader from "../components/PageHeader";
 import StatusBadge from "../components/StatusBadge";
 import { customers } from "../data/customers";
 import "./CustomersView.css";
+import { formatDate } from "../utils/format";
+import AddCustomerModal from "../components/AddCustomerModal";
+import type { Customer } from "../types/customer";
 
 type SortOrder = "asc" | "desc";
-
-const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
 
 export const CustomersView: React.FC = () => {
   const [query, setQuery] = useState("");
   const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
+  const [list, setList] = useState<Customer[]>(customers);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const handleAdd = (customer: Customer) => {
+    setList((prev) => [customer, ...prev]);
+  };
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
-    const filtered = customers.filter((c) =>
+    const filtered = list.filter((c) =>
       `${c.firstName} ${c.lastName} ${c.email}`.toLowerCase().includes(q),
     );
     return [...filtered].sort((a, b) =>
@@ -29,7 +31,7 @@ export const CustomersView: React.FC = () => {
         ? a.firstName.localeCompare(b.firstName)
         : b.firstName.localeCompare(a.firstName),
     );
-  }, [query, sortOrder]);
+  }, [list, query, sortOrder]);
 
   return (
     <div className="customers-view">
@@ -37,7 +39,10 @@ export const CustomersView: React.FC = () => {
         title="Customers"
         subtitle="Manage and review everyone using your platform"
         action={
-          <button className="btn btn-primary">
+          <button
+            className="btn btn-primary"
+            onClick={() => setIsModalOpen(true)}
+          >
             <Plus size={16} />
             Add customer
           </button>
@@ -116,9 +121,16 @@ export const CustomersView: React.FC = () => {
         </div>
 
         <div className="customers-footer">
-          Showing {visible.length} of {customers.length} customers
+          Showing {visible.length} of {list.length} customers
         </div>
       </div>
+
+      {isModalOpen && (
+        <AddCustomerModal
+          onClose={() => setIsModalOpen(false)}
+          onAdd={handleAdd}
+        />
+      )}
     </div>
   );
 };

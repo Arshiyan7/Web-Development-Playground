@@ -4,25 +4,11 @@
   gap: var(--space-6);
 }
 
-/* ---------- Page heading ---------- */
-.page-title {
-  margin: 0 0 var(--space-1);
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.page-subtitle {
-  margin: 0;
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-}
-
 /* ---------- Metric cards row ---------- */
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 280px));  /* 3 side by side, max 280px each */
-  justify-content: start;                              /* use `center` to center the row */
+  grid-template-columns: repeat(3, minmax(0, 280px));
+  justify-content: start;
   gap: var(--space-4);
 }
 
@@ -33,33 +19,11 @@
   .metrics-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* ---------- Chart + table row ---------- */
+/* ---------- Chart + activity row ---------- */
 .widgets-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;      /* chart gets twice the width of the table */
+  grid-template-columns: 2fr 1fr;
   gap: var(--space-4);
-}
-
-.chart-container-slot,
-.table-container-slot {
-  min-height: 320px;
-  min-width: 0;                         /* prevents Recharts from stretching the grid cell */
-  display: grid;
-  place-items: center;
-  padding: var(--space-6);
-
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--glass-highlight), var(--glass-shadow);
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  backdrop-filter: blur(var(--glass-blur));
-}
-
-.slot-placeholder {
-  margin: 0;
-  color: var(--text-muted);
-  font-size: 0.875rem;
 }
 
 @media (max-width: 1100px) {

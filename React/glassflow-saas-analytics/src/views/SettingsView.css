@@ -108,10 +108,10 @@
   outline: none;
   background: var(--glass-bg-hover);
   border-color: var(--accent);
-  box-shadow: 0 0 0 0.4px var(--accent-ring);
+  box-shadow: 0 0 0 0.4px var(--accent-ring);   /* your tweak, kept as is */
 }
 
-/* ---------- Toggle rows ---------- */
+/* ---------- Toggle + account rows ---------- */
 .settings-toggles {
   list-style: none;
   margin: 0;
@@ -129,7 +129,7 @@
 }
 
 .settings-toggle-row:first-child,
-.settings-account-row:first-of-type {
+.settings-panel__head + .settings-account-row {   /* first row under the heading: no divider */
   border-top: none;
   padding-top: 0;
 }
@@ -137,6 +137,10 @@
 .settings-toggle-row:last-child,
 .settings-account-row:last-child {
   padding-bottom: 0;
+}
+
+.settings-toggle-text {
+  min-width: 0;                  /* lets long descriptions wrap instead of overflowing */
 }
 
 .settings-toggle-title {
@@ -223,8 +227,16 @@
 /* ---------- Save bar ---------- */
 .settings-actions {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-end;
   gap: var(--space-3);
+}
+
+.settings-saved {
+  margin-right: auto;            /* pushes the message left, buttons stay right */
+  font-size: 0.875rem;
+  color: var(--success);
 }
 
 /* ---------- Responsive ---------- */
@@ -243,8 +255,8 @@
     gap: var(--space-3);
   }
 
-  .settings-actions {
-    justify-content: stretch;
+  .settings-saved {
+    flex-basis: 100%;            /* message gets its own line above the buttons */
   }
 
   .settings-actions .btn {

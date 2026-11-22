@@ -1,8 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
+import type { SettingsData } from "../types/settings";
+import { defaultSettings } from "../data/settings";
+import { loadSettings, saveSettings, clearSettings } from "../utils/settingsStorage";
 import "./SettingsView.css";
 
 export const SettingsView: React.FC = () => {
+  const [saved, setSaved] = useState<SettingsData>(loadSettings);
+  const [form, setForm] = useState<SettingsData>(saved);
+  const [notice, setNotice] = useState<string | null>(null);
+
+  const hasChanges = JSON.stringify(form) !== JSON.stringify(saved);
+
+  const handleProfileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      profile: { ...prev.profile, [name]: value },
+    }));
+    setNotice(null);
+  };
+
+  const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      notifications: { ...prev.notifications, [name]: checked },
+    }));
+    setNotice(null);
+  };
+
+  const handleSave = () => {
+    saveSettings(form);
+    setSaved(form);
+    setNotice("Settings saved");
+  };
+
+  const handleCancel = () => {
+    setForm(saved);
+    setNotice(null);
+  };
+
+  const handleChangePassword = () => {
+    setNotice("Demo only: a password reset link would be sent here");
+  };
+
+  const handleDeleteAccount = () => {
+    const confirmed = window.confirm(
+      "This resets all demo data to its defaults. Continue?"
+    );
+    if (!confirmed) return;
+
+    clearSettings();
+    setSaved(defaultSettings);
+    setForm(defaultSettings);
+    setNotice("Demo data reset to defaults");
+  };
+
   return (
     <div className="settings-view">
       <PageHeader
@@ -37,9 +91,11 @@ export const SettingsView: React.FC = () => {
               </label>
               <input
                 id="settings-name"
+                name="name"
                 type="text"
                 className="settings-input"
-                defaultValue="Arshiyan"
+                value={form.profile.name}
+                onChange={handleProfileChange}
               />
             </div>
 
@@ -49,9 +105,11 @@ export const SettingsView: React.FC = () => {
               </label>
               <input
                 id="settings-role"
+                name="role"
                 type="text"
                 className="settings-input"
-                defaultValue="Frontend Admin"
+                value={form.profile.role}
+                onChange={handleProfileChange}
               />
             </div>
 
@@ -61,9 +119,11 @@ export const SettingsView: React.FC = () => {
               </label>
               <input
                 id="settings-email"
+                name="email"
                 type="email"
                 className="settings-input"
-                defaultValue="arshiyan@example.com"
+                value={form.profile.email}
+                onChange={handleProfileChange}
               />
             </div>
           </div>
@@ -87,7 +147,13 @@ export const SettingsView: React.FC = () => {
                 </p>
               </div>
               <label className="settings-switch">
-                <input type="checkbox" role="switch" defaultChecked />
+                <input
+                  type="checkbox"
+                  role="switch"
+                  name="email"
+                  checked={form.notifications.email}
+                  onChange={handleToggle}
+                />
                 <span className="settings-switch__track"></span>
               </label>
             </li>
@@ -100,7 +166,13 @@ export const SettingsView: React.FC = () => {
                 </p>
               </div>
               <label className="settings-switch">
-                <input type="checkbox" role="switch" defaultChecked />
+                <input
+                  type="checkbox"
+                  role="switch"
+                  name="weeklyReport"
+                  checked={form.notifications.weeklyReport}
+                  onChange={handleToggle}
+                />
                 <span className="settings-switch__track"></span>
               </label>
             </li>
@@ -113,7 +185,13 @@ export const SettingsView: React.FC = () => {
                 </p>
               </div>
               <label className="settings-switch">
-                <input type="checkbox" role="switch" />
+                <input
+                  type="checkbox"
+                  role="switch"
+                  name="newCustomer"
+                  checked={form.notifications.newCustomer}
+                  onChange={handleToggle}
+                />
                 <span className="settings-switch__track"></span>
               </label>
             </li>
@@ -126,7 +204,13 @@ export const SettingsView: React.FC = () => {
                 </p>
               </div>
               <label className="settings-switch">
-                <input type="checkbox" role="switch" defaultChecked />
+                <input
+                  type="checkbox"
+                  role="switch"
+                  name="failedPayment"
+                  checked={form.notifications.failedPayment}
+                  onChange={handleToggle}
+                />
                 <span className="settings-switch__track"></span>
               </label>
             </li>
@@ -145,34 +229,55 @@ export const SettingsView: React.FC = () => {
           <div className="settings-account-row">
             <div className="settings-toggle-text">
               <p className="settings-toggle-title">Password</p>
-              <p className="settings-toggle-desc">
-                Last changed 3 months ago.
-              </p>
+              <p className="settings-toggle-desc">Last changed 3 months ago.</p>
             </div>
-            <button type="button" className="btn btn-ghost">
+            <button
+              type="button"
+              className="btn btn-ghost"
+              onClick={handleChangePassword}
+            >
               Change password
             </button>
           </div>
 
           <div className="settings-account-row">
             <div className="settings-toggle-text">
-              <p className="settings-toggle-title">Delete account</p>
+              <p className="settings-toggle-title">Reset demo data</p>
               <p className="settings-toggle-desc">
-                Permanently remove your account and all data.
+                Clear saved settings and restore the defaults.
               </p>
             </div>
-            <button type="button" className="btn settings-btn-danger">
-              Delete account
+            <button
+              type="button"
+              className="btn settings-btn-danger"
+              onClick={handleDeleteAccount}
+            >
+              Reset data
             </button>
           </div>
         </section>
 
         {/* ---------- Save bar ---------- */}
         <div className="settings-actions">
-          <button type="button" className="btn btn-ghost">
+          {notice && (
+            <span className="settings-saved" role="status">
+              {notice}
+            </span>
+          )}
+          <button
+            type="button"
+            className="btn btn-ghost"
+            onClick={handleCancel}
+            disabled={!hasChanges}
+          >
             Cancel
           </button>
-          <button type="button" className="btn btn-primary">
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={handleSave}
+            disabled={!hasChanges}
+          >
             Save changes
           </button>
         </div>

@@ -1,10 +1,48 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 import ChartCard from "../components/ChartCard";
+import MetricCard from "../components/MetricCard";
+import StatusBadge from "../components/StatusBadge";
 import AreaTrendChart from "../components/charts/AreaTrendChart";
 import DonutChart from "../components/charts/DonutChart";
-import { monthlyRevenue, revenueByPlan } from "../data/revenue";
+import type { MetricCardProps } from "../types/dashboard";
+import { monthlyRevenue, revenueByPlan, transactions } from "../data/revenue";
+import { formatCurrency, formatDate } from "../utils/format";
 import "./RevenueView.css";
+
+const mrr = monthlyRevenue[monthlyRevenue.length - 1]?.revenue ?? 0;
+
+const paidTotal = transactions
+  .filter((t) => t.status === "paid")
+  .reduce((sum, t) => sum + t.amount, 0);
+
+const failedTotal = transactions
+  .filter((t) => t.status === "failed")
+  .reduce((sum, t) => sum + t.amount, 0);
+
+const metrics: MetricCardProps[] = [
+  {
+    id: "1",
+    title: "MRR",
+    value: formatCurrency(mrr),
+    change: "16.2%",
+    isPositive: true,
+  },
+  {
+    id: "2",
+    title: "Net Revenue",
+    value: formatCurrency(paidTotal),
+    change: "9.4%",
+    isPositive: true,
+  },
+  {
+    id: "3",
+    title: "Failed Payments",
+    value: formatCurrency(failedTotal),
+    change: "1.8%",
+    isPositive: false,
+  },
+];
 
 export const RevenueView: React.FC = () => {
   return (
@@ -14,19 +52,19 @@ export const RevenueView: React.FC = () => {
         subtitle="Track income, plans, and recent payments"
       />
 
-      {/* TODO (you): 3 MetricCards here: MRR, Net Revenue, Refunds */}
-      <div className="revenue-metrics"></div>
+      <div className="revenue-metrics">
+        {metrics.map((metric) => (
+          <MetricCard key={metric.id} {...metric} />
+        ))}
+      </div>
 
       <div className="revenue-charts">
-        <ChartCard
-          title="Revenue Overview"
-          subtitle="Monthly revenue this year"
-        >
+        <ChartCard title="Revenue Overview" subtitle="Monthly revenue this year">
           <AreaTrendChart
             data={monthlyRevenue}
             xKey="month"
             yKey="revenue"
-            valueFormatter={(v) => `$${v.toLocaleString()}`}
+            valueFormatter={formatCurrency}
           />
         </ChartCard>
 
@@ -35,7 +73,7 @@ export const RevenueView: React.FC = () => {
             data={revenueByPlan}
             nameKey="plan"
             valueKey="revenue"
-            valueFormatter={(v) => `$${v.toLocaleString()}`}
+            valueFormatter={formatCurrency}
           />
         </ChartCard>
       </div>
@@ -56,9 +94,17 @@ export const RevenueView: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {/* TODO (you): one <tr> per item in `transactions` (data/revenue.ts).
-                  Format the amount as currency and the date like Customers does.
-                  Status cell uses <StatusBadge status={...} />. */}
+              {transactions.map((t) => (
+                <tr key={t.id}>
+                  <td>{t.id}</td>
+                  <td>{t.customer}</td>
+                  <td className="table-num">{formatCurrency(t.amount)}</td>
+                  <td>
+                    <StatusBadge status={t.status} />
+                  </td>
+                  <td>{formatDate(t.date)}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
